@@ -1,0 +1,151 @@
+/* CSS completo */
+
+/* Variabili globali */
+:root {  
+    --colore-primario: #F6921E; 
+    --colore-secondario: #4A2E37; 
+    --blu-chiaro: #62CBC6; 
+    --grigio-chiaro: #EAEAEA; 
+    --errore: #E63946;
+    --c-color: #FFD700; /* Nuovo colore per "C" */
+    --vai-color: #4A2E37; /* Nuovo colore per il pulsante "Vai" */
+}
+
+/* Stili per il body */
+body {
+    background-color: #FAFAFA; 
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Stili per la navbar principale */
+/* Stili per la navbar principale */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colore-primario);
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra sottile alla navbar */
+}
+
+
+.titolo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px; /* Reduce the font size of the main title */
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.sottotitolo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px; /* Adjust the font size of the subtitle */
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-top: -5px; /* Adjust to bring it closer to the main title */
+    text-align: center; /* Center the text */
+}
+
+/* Stili per la navbar dei linguaggi */
+/* Stili per la navbar dei linguaggi */
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--grigio-chiaro);
+    color: var(--colore-primario);
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili per il testo nella navbar2 */
+.navbar2 a {
+    color: #fff; /* Cambia il colore del testo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Aggiungi un'ombra al testo */
+}
+
+
+.linguaggi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.linguaggi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.linguaggi ul li {
+    font-size: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: var(--grigio-chiaro);
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.linguaggi ul li:hover {
+    transform: translateY(-5px);
+}
+
+/* Stili per i box dei linguaggi */
+.linguaggio-box {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Modifica il colore per il box di "C" */
+.linguaggio-box.c {
+    background-color: var(--c-color);
+}
+
+.linguaggio-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Colori specifici per i linguaggi */
+.c { background-color: var(--c-color); }
+.java { background-color: var(--colore-secondario); }
+.html { background-color: var(--blu-chiaro); }
+.css { background-color: var(--colore-primario); }
+.python { background-color: var(--grigio-chiaro); }
+.javascript { background-color: var(--errore); }
+
+/* Stili per i pulsanti */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--vai-color); /* Modifica il colore per il pulsante "Vai" */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--colore-secondario);
+}
+
+.linguaggi-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra sottile alla sezione dei box dei linguaggi */
+}
+
