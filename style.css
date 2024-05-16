@@ -1,136 +1,76 @@
-/* CSS completo */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Variabili globali */
-:root {  
-    --colore-primario: #F6921E; 
-    --colore-secondario: #4A2E37; 
-    --blu-chiaro: #62CBC6; 
-    --grigio-chiaro: #EAEAEA; 
-    --errore: #E63946;
-    --c-color: #FFD700; /* Nuovo colore per "C" */
-    --vai-color: #4A2E37; /* Nuovo colore per il pulsante "Vai" */
+:root {
+    --colore-principale: #007bff; /* Blu */
+    --colore-testo: #333; /* Nero */
+    --colore-sfondo: #f2f2f2; /* Grigio chiaro */
+    --colore-accento: #28a745; /* Verde */
+    --colore-python: #ffce54; /* Giallo */
 }
 
 /* Stili per il body */
 body {
-    background-color: #FAFAFA; 
-    margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--colore-sfondo);
+    color: var(--colore-testo);
+    line-height: 1.6;
 }
 
-/* Stili per la navbar principale */
-/* Stili per la navbar principale */
+/* Stili per l'header */
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--colore-primario);
-    color: #fff;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra sottile alla navbar */
+    background-color: var(--colore-principale);
+    padding: 20px;
+    text-align: center;
 }
-
 
 .titolo {
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px; /* Reduce the font size of the main title */
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Effetto ombra */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.titolo:hover, .sottotitolo:hover {
+    opacity: 0.8;
 }
 
 .sottotitolo {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px; /* Adjust the font size of the subtitle */
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    margin-top: -5px; /* Adjust to bring it closer to the main title */
-    text-align: center; /* Center the text */
-}
-
-/* Stili per la navbar dei linguaggi */
-/* Stili per la navbar dei linguaggi */
-.navbar2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--grigio-chiaro);
-    color: var(--colore-primario);
-    padding: 10px 20px;
-    border-bottom: 2px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Stili per il testo nella navbar2 */
-.navbar2 a {
-    color: #fff; /* Cambia il colore del testo */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Aggiungi un'ombra al testo */
-}
-
-
-.linguaggi {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
-}
-
-.linguaggi ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.linguaggi ul li {
-    font-size: 20px;
-    margin-right: 20px;
-    padding: 10px 20px;
-    background-color: var(--grigio-chiaro);
-    border-radius: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.linguaggi ul li:hover {
-    transform: translateY(-5px);
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Effetto ombra */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
 }
 
 /* Stili per i box dei linguaggi */
 .linguaggio-box {
     background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     margin-bottom: 20px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
 }
 
-/* Modifica il colore per il box di "C" */
-.linguaggio-box.c {
-    background-color: var(--c-color);
+.linguaggio-box h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.linguaggio-box:hover {
-    transform: translateY(-5px);
+.descrizione {
+    margin-bottom: 20px;
 }
-
-/* Colori specifici per i linguaggi */
-.c { background-color: var(--c-color); }
-.java { background-color: var(--colore-secondario); }
-.html { background-color: var(--blu-chiaro); }
-.css { background-color: var(--colore-primario); }
-.python { background-color: var(--grigio-chiaro); }
-.javascript { background-color: var(--errore); }
 
 /* Stili per i pulsanti */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--vai-color); /* Modifica il colore per il pulsante "Vai" */
+    background-color: var(--colore-principale);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -138,14 +78,24 @@ body {
 }
 
 .btn:hover {
-    background-color: var(--colore-secondario);
+    background-color: var(--colore-accento);
 }
 
-.linguaggi-container {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra sottile alla sezione dei box dei linguaggi */
+/* Stili per il footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--colore-principale);
+    color: #fff;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
