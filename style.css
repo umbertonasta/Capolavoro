@@ -172,27 +172,6 @@ code {
     padding-left: 30px;
 }
 
-.login-buttons {
-    position: relative;
-}
-
-.btn-access,
-.btn-register {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--colore-principale);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-    margin-left: 10px;
-}
-
-.btn-access:hover,
-.btn-register:hover {
-    background-color: var(--colore-accento);
-}
-
 .brand {
     margin: 0 auto; /* Centra il brand (titolo e sottotitolo) orizzontalmente */
 }
@@ -218,6 +197,3 @@ code {
     padding-left: 30px;
 }
 
-.login-buttons {
-    position: relative;
-}
