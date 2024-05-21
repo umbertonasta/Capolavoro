@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: calc(1em + 0.5px);
 }
 
 /* Variabili globali */
@@ -24,15 +25,20 @@ body {
 
 /* Stili per l'header */
 .navbar {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--colore-principale);
     padding: 20px;
-    text-align: center;
 }
 
 .titolo {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Aumenta la dimensione del titolo */
     margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Effetto ombra */
+    color: #fff; /* Testo bianco per contrasto con lo sfondo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Effetto ombra più evidente */
     opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
@@ -42,29 +48,43 @@ body {
 }
 
 .sottotitolo {
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Effetto ombra */
+    font-size: 1.5rem; /* Aumenta la dimensione del sottotitolo */
+    color: #fff; /* Testo bianco per contrasto con lo sfondo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Effetto ombra più evidente */
     opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
 
+.linguaggi-container {
+    overflow: hidden; /* Nasconde il contenuto che va oltre i limiti dell'elemento genitore */
+}
+
 /* Stili per i box dei linguaggi */
 .linguaggio-box {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff; /* Aggiungi il colore di sfondo bianco */
+    border-radius: 10px; /* Arrotonda gli angoli del box */
+    overflow: hidden; /* Nasconde i bordi arrotondati che vanno oltre i limiti del box */
+    padding: 10px; /* Aggiungi del padding interno per far spazio al contenuto */
+    margin: 10px; /* Aggiungi del margine esterno per separare i box */
+    transition: transform 0.3s ease; /* Aggiungi una transizione per un effetto di sollevamento graduale */
+    transform: translateY(0); /* Aggiungi uno stato iniziale */
 }
 
 .linguaggio-box h2 {
-    font-size: 2rem;
+    font-size: 2.2rem; /* Aumenta la dimensione del testo del titolo */
     margin-bottom: 10px;
+    color: var(--colore-principale); /* Colore principale */
 }
 
+.linguaggio-box:hover {
+    transform: translateY(-5px) scale(1.02); /* Solleva leggermente il box e ingrandiscilo leggermente */
+}
 
 .descrizione {
+    font-size: 1.1rem; /* Aumenta la dimensione del testo della descrizione */
     margin-bottom: 20px;
+    color: var(--colore-testo); /* Colore testo */
 }
 
 /* Stili per i pulsanti */
@@ -82,12 +102,8 @@ body {
     background-color: var(--colore-accento);
 }
 
-/* Stili per il footer */
-.footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: var(--colore-principale);
-    color: #fff;
+html {
+    scroll-behavior: smooth;
 }
 
 @keyframes fadeIn {
@@ -99,4 +115,109 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.home-link {
+    color: #fff; /* Imposta il colore del testo a bianco */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.legend-container {
+    position: absolute;
+    top: 200px; 
+    left: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd; 
+    border-radius: 10px; /* Bordi smussati */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Padding ridotto per adattarsi meglio al testo */
+}
+
+.legend-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    color: #007bff; /* Cambia colore del testo del toggle */
+}
+
+.legend-content {
+    margin-top: 10px;
+}
+
+.legend-content ul {
+    list-style-type: none; /* Rimuove i punti dalla lista */
+    padding: 0;
+}
+
+.legend-content ul li {
+    margin-bottom: 10px;
+}
+
+.tutorial-container {
+    position: absolute;
+    top: 200px; /* 100px per l'altezza della navbar e 20px di margine */
+    left: 300px; /* 20px di margine, 200px per la larghezza della legenda e 20px di margine */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bordi smussati */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+code {
+    display: block;
+    padding-left: 30px;
+}
+
+.login-buttons {
+    position: relative;
+}
+
+.btn-access,
+.btn-register {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--colore-principale);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+.btn-access:hover,
+.btn-register:hover {
+    background-color: var(--colore-accento);
+}
+
+.brand {
+    margin: 0 auto; /* Centra il brand (titolo e sottotitolo) orizzontalmente */
+}
+
+/* Stili per il contenitore del tutorial */
+.tutorial-container {
+    position: absolute;
+    top: 200px; /* 100px per l'altezza della navbar e 20px di margine */
+    left: 300px; /* 20px di margine, 200px per la larghezza della legenda e 20px di margine */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bordi smussati */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+code {
+    display: block;
+    padding-left: 30px;
+}
+
+.login-buttons {
+    position: relative;
 }

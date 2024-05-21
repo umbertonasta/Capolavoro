@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIARIO DEL PROGRAMMATORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand">
+        <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
+        <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
+    </div>
+</header>
+
+<div class="legend-container">
+    <div class="legend-toggle">Argomenti del tutorial</div>
+    <div class="legend-content">
+        <ul>
+            <li>Introduzione</li>
+            <li>Sintassi</li>
+            <li>Selettori</li>
+            <li>Proprietà di Stile di Base</li>
+            <li>Modello di Box</li>
+            <li>Layout e Posizionamento</li>
+            <li>Colori e Sfondi</li>
+            <li>Transizioni e Animazioni</li>
+        </ul>
+    </div>
+</div>
+
+<div class="tutorial-container">
+    <h2>Introduzione</h2>
+    <p>CSS (Cascading Style Sheets) è il linguaggio utilizzato per descrivere l'aspetto e la formattazione di un documento scritto in HTML. CSS consente di separare la presentazione del contenuto dalla struttura, facilitando la manutenzione e il design delle pagine web.</p>
+    <h3>Cosa è CSS:</h3>
+    <p>CSS è un linguaggio di stile usato per controllare l'aspetto di documenti HTML. Permette di applicare stili a elementi HTML, come colori, font, spaziatura e layout.</p>
+    <h3>Vantaggi di CSS:</h3>
+    <ul>
+        <li>Separazione tra contenuto e presentazione</li>
+        <li>Maggiore controllo sul layout e il design</li>
+        <li>Consistenza nello stile attraverso più pagine</li>
+        <li>Riduzione del codice HTML ripetitivo</li>
+    </ul>
+    <h3>Struttura di un File CSS:</h3>
+    <p>Un file CSS contiene regole di stile, ciascuna composta da un selettore e un blocco di dichiarazione.</p>
+    <p>
+        <code class="code">
+            /* Selettore */ <br>
+            selettore { <br>
+              proprietà: valore; /* Dichiarazione */ <br>
+            } <br>    
+        </code>
+    </p>
+    <h3>Esempio di CSS:</h3>
+    <p>Un semplice esempio che cambia il colore del testo di un paragrafo in blu e ne imposta il font.</p>
+    <p>
+        <code class="code">
+            p { <br>
+                color: blue; <br>
+                font-family: Arial, sans-serif; <br>
+              } <br>           
+        </code>
+    </p>
+    <p>CSS è essenziale per creare pagine web visivamente accattivanti e user-friendly.</p>
+    <h2>Sintassi</h2>
+    <p>La sintassi di CSS è semplice e strutturata in modo da applicare stili agli elementi HTML.</p>
+    <h3>Regole CSS:</h3>
+    <p>Le regole CSS sono composte da selettori e dichiarazioni.</p>
+    <p>
+        <code class="code">
+            selettore { <br>
+                proprietà: valore; <br>
+              } <br>   
+        </code>
+    </p>
+    <h3>Selettore:</h3>
+    <p>Indica gli elementi HTML a cui applicare lo stile.</p>
+    <p>
+        <code class="code">
+            p { <br>
+                /* Stile applicato ai paragrafi */ <br>
+              } <br>              
+        </code>
+    </p>
+    <h2>Proprietà e Valori:</h2>
+    <p>Le proprietà definiscono quale aspetto modificare e i valori specificano il cambiamento.</p>
+    <p>
+        <code class="code">
+            color: red; /* Proprietà colore impostata su rosso */ <br>
+            font-size: 16px; /* Dimensione del font impostata a 16 pixel */ <br>            
+        </code>
+    </p>
+    <h3>Commenti:</h3>
+    <p>I commenti sono utilizzati per aggiungere note e sono ignorati dal browser.</p>
+    <p>
+        <code class="code">
+            /* Questo è un commento */ <br>
+        </code>
+    </p>
+    <h3>File CSS Esterni:</h3>
+    <p>I file CSS esterni sono collegati ai documenti HTML utilizzando il tag <strong>link</strong>.</p>
+    <p>
+        <code class="code">
+            &lt;link rel="stylesheet" href="stile.css"&gt; <br>
+        </code>
+    </p>
+    <p>La sintassi di CSS è fondamentale per definire come gli elementi HTML devono apparire sulla pagina web, permettendo una gestione efficace e ordinata degli stili.</p>
+    <h2>Selettori</h2>
+    <p>I selettori CSS sono utilizzati per scegliere gli elementi HTML a cui applicare gli stili. Esistono vari tipi di selettori che consentono un controllo preciso sugli elementi.</p>
+    <h3>Selettori di Tipo:</h3>
+    <p>Selezionano tutti gli elementi di un certo tipo.</p>
+    <p>
+        <code class="code">
+            p { <br>
+                color: blue; <br>
+              } <br>       
+        </code>
+    </p>
+    <h3>Selettori di Classe:</h3>
+    <p>Selezionano elementi con un attributo <strong>class</strong> specifico. Il nome della classe è preceduto da un punto (.).</p>
+    <p>
+        <code class="code">
+            .intestazione { <br>
+                font-size: 24px; <br>
+              } <br>             
+        </code>
+    </p>
+    <h3>Selettori di ID:</h3>
+    <p>Selezionano un elemento con un attributo <strong>id</strong> specifico. Il nome dell'ID è preceduto da un cancelletto (#).</p>
+    <p>
+        <code class="code">
+            #menu { <br>
+                background-color: #333; <br>
+              } <br>              
+        </code>
+    </p>
+    <h3>Selettori di Attributo:</h3>
+    <p>Selezionano elementi in base al valore di un attributo.</p>
+    <p>
+        <code class="code">
+            input[type="text"] { <br>
+                border: 1px solid #000; <br>
+              } <br>              
+        </code>
+    </p>
+    <h3>Selettori Discendenti:</h3>
+    <p>Selezionano elementi che sono discendenti di un altro elemento.</p>
+    <p>
+        <code class="code">
+            div p { <br>
+                margin: 10px; <br>
+              } <br>              
+        </code>
+    </p>
+    <h3>Selettori di Pseudo-classi:</h3>
+    <p>Selezionano elementi in uno stato specifico, come hover o focus.</p>
+    <p>
+        <code class="code">
+            a:hover { <br>
+                color: red; <br>
+              } <br>              
+        </code>
+    </p>
+    <h3>Selettori di Pseudo-elementi:</h3>
+    <p>Selezionano e stilizzano parti specifiche di un elemento.</p>
+    <p>
+        <code class="code">
+            p::first-line { <br>
+                font-weight: bold; <br>
+              } <br>              
+        </code>
+    </p>
+    <p>I selettori CSS permettono di applicare stili precisi e flessibili agli elementi HTML, rendendo possibile la creazione di design complessi e responsivi.</p>
+    <h2>Proprietà di Stili di base</h2>
+    <p>Le proprietà di stile di base in CSS permettono di controllare l'aspetto degli elementi HTML.</p>
+    <h3>Color:</h3>
+    <p>Imposta il colore del testo.</p>
+    <p>
+        <code class="code">
+            color: blue; <br>
+        </code>
+    </p>
+    <h3>Background-color:</h3>
+    <p>Imposta il colore di sfondo di un elemento.</p>
+    <p>
+        <code class="code">
+            background-color: yellow; <br>
+        </code>
+    </p>
+    <h3>Font-size:</h3>
+    <p>Imposta la dimensione del testo.</p>
+    <p>
+        <code class="code">
+            font-size: 16px; <br>
+        </code>
+    </p>
+    <h3>Font-family:</h3>
+    <p>Imposta il tipo di carattere del testo.</p>
+    <p>
+        <code class="code">
+            font-family: Arial, sans-serif; <br>
+        </code>
+    </p>
+    <h3>Text-align:</h3>
+    <p>Imposta l'allineamento del testo.</p>
+    <p>
+        <code class="code">
+            text-align: center; <br>
+        </code>
+    </p>
+    <h3>Margin:</h3>
+    <p>Imposta lo spazio esterno intorno a un elemento.</p>
+    <p>
+        <code class="code">
+            margin: 20px; <br>
+        </code>
+    </p>
+    <h3>Padding:</h3>
+    <p>Imposta lo spazio interno all'interno di un elemento.</p>
+    <p>
+        <code class="code">
+            padding: 10px; <br>
+        </code>
+    </p>
+    <h3>Border:</h3>
+    <p>Imposta il bordo di un elemento.</p>
+    <p>
+        <code class="code">
+            border: 1px solid black; <br>
+        </code>
+    </p>
+    <h3>Width e Height:</h3>
+    <p>Impostano la larghezza e l'altezza di un elemento.</p>
+    <p>
+        <code class="code">
+            width: 100px; <br>
+            height: 200px; <br>        
+        </code>
+    </p>
+    <p>Queste proprietà di stile di base sono fondamentali per definire l'aspetto e il layout degli elementi HTML, consentendo un controllo preciso del design della pagina web.</p>
+    <h2>Modello di Box</h2>
+    <p>Il modello di box CSS definisce come sono calcolate le dimensioni e lo spazio intorno agli elementi HTML. Ogni elemento è rappresentato come un rettangolo composto da quattro parti: contenuto, padding, bordo e margine.</p>
+    <h3>Contenuto (Content):</h3>
+    <p>L'area dove il testo e le immagini sono visualizzati.</p>
+    <p>
+        <code class="code">
+            width: 200px; <br>
+            height: 100px; <br>            
+        </code>
+    </p>
+    <h3>Padding:</h3>
+    <p>Lo spazio tra il contenuto e il bordo dell'elemento. Aggiunge spazio interno.</p>
+    <p>
+        <code class="code">
+            padding: 20px; <br>
+        </code>
+    </p>
+    <h3>Bordo (Border):</h3>
+    <p>Una cornice intorno al padding e al contenuto.</p>
+    <p>
+        <code class="code">
+            border: 2px solid black; <br>
+        </code>
+    </p>
+    <h3>Margine (Margin):</h3>
+    <p>Lo spazio esterno che separa l'elemento dagli altri elementi.</p>
+    <p>
+        <code class="code">
+            margin: 10px; <br>
+        </code>
+    </p>
+    <h3>Box-sizing:</h3>
+    <p>La proprietà <strong>box-sizing</strong> definisce come vengono calcolate le dimensioni totali dell'elemento.</p>
+    <p>
+        <code class="code">
+            box-sizing: content-box; /* Include solo il contenuto */ <br>
+            box-sizing: border-box; /* Include padding e bordo */ <br>            
+        </code>
+    </p>
+    <p>Esempio completo:</p>
+    <p>
+        <code class="code">
+            div {<br>
+                width: 200px;<br>
+                height: 100px;<br>
+                padding: 20px;<br>
+                border: 2px solid black;<br>
+                margin: 10px;<br>
+                box-sizing: border-box;<br>
+              } <br>              
+        </code>
+    </p>
+    <p>Il modello di box è essenziale per comprendere come gli elementi sono dimensionati e spazialmente organizzati nella pagina web.</p>
+    <h2>Layout e Posizionamento</h2>
+    <p>Il layout e il posizionamento in CSS consentono di controllare la disposizione degli elementi sulla pagina web.</p>
+    <h3>Display:</h3>
+    <p>La proprietà <strong>display</strong> definisce il tipo di scatola generata da un elemento.</p>
+    <p>
+        <code class="code">
+            display: block;   /* Elemento a blocco */<br>
+            display: inline;  /* Elemento in linea */<br>
+            display: flex;    /* Contenitore flessibile */<br>
+            display: grid;    /* Contenitore a griglia */ <br>            
+        </code>
+    </p>
+    <h3>Position:</h3>
+    <p>La proprietà <strong>position</strong> specifica il metodo di posizionamento di un elemento.</p>
+    <p>
+        <code class="code">
+            position: static;   /* Posizione predefinita */<br>
+            position: relative; /* Posizione relativa */<br>
+            position: absolute; /* Posizione assoluta */<br>
+            position: fixed;    /* Posizione fissa */<br>
+            position: sticky;   /* Posizione adesiva */ <br>            
+        </code>
+    </p>
+    <h3>Top, Right, Bottom, Left:</h3>
+    <p>Specificano la posizione di un elemento posizionato (relative, absolute, fixed, sticky).</p>
+    <p>
+        <code class="code">
+            position: absolute; <br>
+            top: 10px; <br>
+            right: 20px; <br>            
+        </code>
+    </p>
+    <h3>Float:</h3>
+    <p>La proprietà <strong>float</strong> permette di spostare un elemento a sinistra o a destra, permettendo agli elementi circostanti di avvolgerlo.</p>
+    <p>
+        <code class="code">
+            float: left; <br>
+        </code>
+    </p>
+    <h3>Flexbox:</h3>
+    <p>Un layout flessibile per allineare e distribuire lo spazio tra gli elementi in un contenitore.</p>
+    <p>
+        <code class="code">
+            display: flex; <br>
+            justify-content: center; /* Allinea gli elementi al centro orizzontalmente */ <br>
+            align-items: center;     /* Allinea gli elementi al centro verticalmente */ <br>        
+        </code>
+    </p>
+    <h3>Grid:</h3>
+    <p>Un layout a griglia bidimensionale per posizionare gli elementi in righe e colonne.</p>
+    <p>
+        <code class="code">
+            display: grid; <br>
+            grid-template-columns: 1fr 2fr; /* Due colonne con larghezze proporzionali */ <br>
+            grid-gap: 10px;                 /* Spazio tra gli elementi della griglia */ <br>            
+        </code>
+    </p>
+    <p>Queste proprietà e tecniche permettono di creare layout complessi e responsivi, migliorando l'organizzazione e la presentazione dei contenuti nella pagina web.</p>
+    <h2>Colori e Sfondi</h2>
+    <p>Le proprietà CSS per i colori e gli sfondi permettono di personalizzare l'aspetto degli elementi HTML.</p>
+    <h3>Color:</h3>
+    <p>Imposta il colore del testo.</p>
+    <p>
+        <code class="code">
+            color: blue; <br>
+        </code>
+    </p>
+    <h3>Background-color:</h3>
+    <p>Imposta il colore di sfondo di un elemento.</p>
+    <p>
+        <code class="code">
+            background-color: yellow; <br>
+        </code>
+    </p>
+    <h3>Background-image:</h3>
+    <p>Imposta un'immagine di sfondo.</p>
+    <p>
+        <code class="code">
+            background-image: url('immagine.jpg'); <br>
+        </code>
+    </p>
+    <h3>Background-repeat:</h3>
+    <p>Definisce come ripetere l'immagine di sfondo.</p>
+    <p>
+        <code class="code">
+            background-repeat: no-repeat; /* Non ripete l'immagine */ <br>
+            background-repeat: repeat-x;  /* Ripete l'immagine orizzontalmente */ <br>
+            background-repeat: repeat-y;  /* Ripete l'immagine verticalmente */ <br>            
+        </code>
+    </p>
+    <h3>Background-position:</h3>
+    <p>Specifica la posizione dell'immagine di sfondo.</p>
+    <p>
+        <code class="code">
+            background-position: center; /* Centra l'immagine */ <br>
+            background-position: top right; /* Posiziona in alto a destra */ <br>            
+        </code>
+    </p>
+    <h3>Background-size:</h3>
+    <p>Imposta la dimensione dell'immagine di sfondo.</p>
+    <p>
+        <code class="code">
+            background-size: cover; /* Scala l'immagine per coprire tutto il contenitore */ <br>
+            background-size: contain; /* Scala l'immagine per adattarsi al contenitore */ <br>            
+        </code>
+    </p>
+    <h3>Background-attachment:</h3>
+    <p>Definisce se l'immagine di sfondo scorre con il contenuto o rimane fissa.</p>
+    <p>
+        <code class="code">
+            background-attachment: fixed; /* Sfondo fisso */ <br>
+            background-attachment: scroll; /* Sfondo scorre con il contenuto */ <br>            
+        </code>
+    </p>
+    <h3>Opacità (Opacity):</h3>
+    <p>Imposta la trasparenza di un elemento.</p>
+    <p>
+        <code class="code">
+            opacity: 0.5; /* 50% di trasparenza */ <br>
+        </code>
+    </p>
+    <p>Queste proprietà permettono di personalizzare i colori e gli sfondi degli elementi, migliorando l'estetica e la leggibilità delle pagine web.</p>
+    <h2>Transizioni e Animazioni</h2>
+    <p>Le transizioni e le animazioni in CSS aggiungono dinamicità e interattività agli elementi HTML, consentendo loro di cambiare aspetto nel tempo.</p>
+    <h3>Transizioni:</h3>
+    <p>Le transizioni permettono di cambiare gradualmente un elemento da uno stato all'altro.</p>
+    <p>
+        <code class="code">
+            /* Proprietà da transizionare */ <br>
+            elemento {<br>
+              transition-property: proprieta;<br>
+              /* Durata, ritardo, funzione temporale */<br>
+              transition-duration: 1s;<br>
+              transition-delay: 0.5s;<br>
+              transition-timing-function: ease;<br>
+            }<br>
+            
+            /* Esempio: transizione del colore del testo */<br>
+            button {<br>
+              color: black;<br>
+              transition-property: color;<br>
+              transition-duration: 0.5s;<br>
+            }<br>
+            
+            button:hover {<br>
+              color: red;<br>
+            }         <br>   
+        </code>
+    </p>
+    <h3>Animazioni:</h3>
+    <p>Le animazioni consentono di creare movimenti o cambiamenti più complessi negli elementi.</p>
+    <p>
+        <code class="code">
+            /* Definizione dell'animazione */ <br>
+            @keyframes nomeAnimazione {<br>
+              from {<br>
+                /* Stato iniziale */<br>
+                opacity: 0;<br>
+              }<br>
+              to {<br>
+                /* Stato finale */<br>
+                opacity: 1;<br>
+              }<br>
+            }<br>
+            
+            /* Applicazione dell'animazione */<br>
+            elemento {<br>
+              animation-name: nomeAnimazione;<br>
+              animation-duration: 2s;<br>
+              animation-timing-function: ease;<br>
+              animation-delay: 1s;<br>
+              animation-iteration-count: infinite;<br>
+              animation-direction: alternate;<br>
+            }            <br>
+        </code>
+    </p>
+    <h3>@keyframes:</h3>
+    <p>Definisce una sequenza di fotogrammi chiave per l'animazione.</p>
+    <h3>animation-name:</h3>
+    <p>Specifica il nome dell'animazione definita tramite @keyframes.</p>
+    <h3>animation-duration:</h3>
+    <p>Imposta la durata dell'animazione.</p>
+    <h3>animation-timing-function:</h3>
+    <p>Definisce l'andamento dell'animazione nel tempo.</p>
+    <h3>animation-delay:</h3>
+    <p>Ritardo prima dell'inizio dell'animazione.</p>
+    <h3>animation-iteration-count:</h3>
+    <p>Numero di volte che l'animazione viene riprodotta.</p>
+    <h3>animation-direction:</h3>
+    <p>Direzione dell'animazione (normale, alternata, ecc.).</p>
+    <p>Le transizioni e le animazioni CSS aggiungono un elemento di dinamicità e interesse visivo alle pagine web, migliorando l'esperienza utente.</p>
+</div>
+
+</body>
+</html>

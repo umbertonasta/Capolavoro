@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIARIO DEL PROGRAMMATORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand">
+        <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
+        <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
+    </div>
+</header>
+
+<div class="legend-container">
+    <div class="legend-toggle">Argomenti del tutorial</div>
+    <div class="legend-content">
+        <ul>
+            <li>Breve storia, contesto e vantaggi</li>
+            <li>Variabili e tipi di dati</li>
+            <li>Operatori</li>
+            <li>Strutture di controllo</li>
+            <li>Cicli</li>
+            <li>Classi e oggetti</li>
+            <li>Ereditarietà</li>
+            <li>Array</li>
+            <li>Arraylist</li>
+            <li>Try-Catch block</li>
+            <li>Input/Output</li>
+        </ul>
+    </div>
+</div>
+
+<div class="tutorial-container">
+    <h2>Introduzione al linguaggio Java</h2>
+    <p>Benvenuto alla sezione "Introduzione a java" del nostro tutorial! In questa parte, esploreremo i concetti di base del linguaggio di programmazione Java.</p>
+    <h2>Breve storia, contesto e vantaggi</h2>
+    <p>Java è stato sviluppato da Sun Microsystems negli anni '90 come linguaggio versatile e portabile. La sua natura multipiattaforma lo ha reso popolare per lo sviluppo di applicazioni su diverse architetture e sistemi operativi.</p>
+    <h3>Vantaggi:</h3>
+    <p> 
+        <ul>
+            <li><strong>Portabilità:</strong> i programmi Java possono essere eseguiti su diverse piattaforme senza modifiche.</li>
+            <li><strong>Sicurezza:</strong> Java offre un ambiente sandbox per prevenire l'esecuzione di codice dannoso.</li>
+            <li><strong>Ampia libreria standard:</strong> include funzionalità per networking, I/O, GUI e altro ancora.</li>
+        </ul>
+    </p>
+    <p>E' un linguaggio versatile e sicuro con una vasta libreria standard, adatto per lo sviluppo di una vasta gamma di applicazioni software su diverse piattaforme.</p>
+    <h2>Variabili e tipi di dati</h2>
+    <p>In Java, le variabili rappresentano dati modificabili. Puoi dichiararle specificando il tipo e il nome:</p>
+    <p>
+        <code class="code">
+            int numero; // Esempio di dichiarazione di variabile
+        </code>
+    </p>
+    <p>Java ha tipi di dati primitivi per rappresentare dati fondamentali:</p>
+    <p> 
+        <ul>
+            <li><strong>Int:</strong> numeri interi</li>
+            <li><strong>Double:</strong> numeri decimali</li>
+            <li><strong>Boolean:</strong> valori booleani</li>
+            <li><strong>Char:</strong> caratteri Unicode</li>
+        </ul>
+    </p>
+    <p>Puoi dichiarare e inizializzare variabili nello stesso istante:</p>
+    <p>
+        <code class="code">
+            int age = 30; // Dichiarazione e inizializzazione di variabili <br>
+            double height = 1.75; <br>
+            boolean isStudent = true; <br>
+            char symbol = '@'; <br>
+        </code>
+    </p>
+    <p>Java consente conversioni implicite e esplicite tra tipi di dati:</p>
+    <p>
+        <code class="code">
+            int x = 10; <br>
+            double y = 20.5; <br>
+            x = (int) y; // Conversione esplicita da double a int <br>
+        </code>
+    </p>
+    <p>Comprendere l'utilizzo e la manipolazione di variabili e tipi di dati è fondamentale per la programmazione efficace in Java.</p>
+    <h2>Operatori</h2>
+    <p>Gli operatori in Java sono simboli speciali utilizzati per eseguire operazioni su operandi come variabili e costanti. Ecco alcuni degli operatori più comuni in Java:</p>
+    <h3>Operatori Aritmetici:</h3>
+    <p>
+        <code class="code">
+            int x = 10; <br>
+            int y = 5; <br> 
+            int somma = x + y; // somma = 15 <br> 
+            int differenza = x - y; // differenza = 5 <br>
+            int prodotto = x * y; // prodotto = 50 <br>
+            int divisione = x / y; // divisione = 2 <br>
+            int resto = x % y; // resto = 0 <br>
+        </code>
+    </p>
+    <h3>Operatori di Incremento e Decremento:</h3>
+    <p>
+        <code class="code">
+            int a = 5; <br> 
+            a++; // a diventa 6<br>
+            a--; // a diventa 5 di nuovo<br>
+        </code>
+    </p>
+    <h3>Operatori di assegnazione:</h3>
+    <p>
+        <code class="code">
+            int b = 10;<br>
+            b += 5; // b diventa 15<br>
+        </code>
+    </p>
+    <h3>Operatori Relazionali:</h3>
+    <p>
+        <code class="code">
+            int c = 10;<br>
+            int d = 5;<br>
+            boolean isEqual = (c == d); // isEqual è false<br>
+        </code>
+    </p>
+    <h3>Operatori Logici:</h3>
+    <p>
+        <code class="code">
+            boolean condition1 = true;<br>
+            boolean condition2 = false;<br>
+            boolean result = condition1 && condition2; // result è false<br>
+        </code>
+    </p>
+    <P>Comprendere come utilizzare correttamente gli operatori è fondamentale per scrivere codice efficiente e funzionale in Java.</P>
+    <h2>Strutture di controllo</h2>
+    <p>Le strutture di controllo in Java sono utilizzate per gestire il flusso di esecuzione del programma. Le principali strutture di controllo includono:</p>
+    <h3>Istruzione if-else:</h3>
+    <p>Utilizzata per eseguire un blocco di codice se una condizione è vera e un altro blocco se la condizione è falsa.</p>
+    <p>
+        <code class="code">
+            int x = 10; <br>
+            if (x > 5) { <br> 
+                System.out.println("x è maggiore di 5"); <br>
+            } else { <br> 
+                System.out.println("x non è maggiore di 5"); <br>
+            } <br>
+        </code>
+    </p>
+    <h3>Costrutto switch-case:</h3>
+    <p>Utilizzato per eseguire una delle molteplici alternative di codice in base al valore di una variabile.</p>
+    <p>
+        <code class="code">
+            int giorno = 3; <br>
+            switch (giorno) { <br>
+                case 1: <br>
+                    System.out.println("Lunedì"); <br>
+                    break; <br>
+                case 2: <br>
+                    System.out.println("Martedì"); <br>
+                    break; <br>
+                default: <br>
+                    System.out.println("Altro giorno"); <br>
+            } <br>
+        </code>
+    </p>
+    <h3>Ciclo for:</h3>
+    <p>Utilizzato per eseguire un blocco di codice un numero specificato di volte.</p>
+    <p>
+        <code class="code">
+            for (int i = 0; i < 5; i++) { <br>
+                System.out.println("Iterazione " + i); <br>
+            } <br>
+        </code>
+    </p>
+    <h3>Ciclo while:</h3>
+    <p>Utilizzato per eseguire un blocco di codice fintanto che una condizione specificata è vera.</p>
+    <p>
+        <code class="code">
+            int count = 0; <br>
+            while (count < 5) { <br>
+                System.out.println("Conteggio: " + count); <br>
+                count++; <br>
+            } <br>
+        </code>
+    </p>
+    <h3>Ciclo do-while:</h3>
+    <p>Simile al ciclo while, ma garantisce che il blocco di codice venga eseguito almeno una volta, anche se la condizione è falsa.</p>
+    <p>
+        <code class="code">
+            int num = 0; <br>
+            do { <br>
+                System.out.println("Numero: " + num); <br>
+                num++; <br>
+            } while (num < 5); <br>
+        </code>
+    </p>
+    <p>Le strutture di controllo sono fondamentali per la logica di un programma e consentono di prendere decisioni e iterare su insiemi di dati in modo efficiente.</p>
+    <h2>Classi e oggetti</h2>
+    <p>Le classi e gli oggetti sono concetti fondamentali della programmazione orientata agli oggetti (OOP) in Java.</p>
+    <h3>Classe:</h3>
+    <p>Una classe è un modello che definisce le caratteristiche e i comportamenti di un oggetto. Contiene attributi (variabili di istanza) e metodi (funzioni).</p>
+    <p>
+        <code class="code">
+            public class Automobile { <br>
+                // Attributi <br>
+                String marca;<br>
+                String modello;<br>
+                int anno;<br>
+            
+                // Metodo costruttore<br>
+                public Automobile(String marca, String modello, int anno) {<br>
+                    this.marca = marca;<br>
+                    this.modello = modello;<br>
+                    this.anno = anno;<br>
+                }<br>
+            
+                // Metodo<br>
+                public void accendi() {<br>
+                    System.out.println("Automobile accesa");<br>
+                }<br>
+            }<br>
+        </code>
+    </p>
+    <h3>Oggetto:</h3>
+    <p>Un oggetto è un'istanza di una classe. Utilizzando la parola chiave <strong>new</strong>, è possibile creare un nuovo oggetto dalla classe.</p>
+        <code class="code">
+            public class Main { <br>
+                public static void main(String[] args) {<br>
+                    // Creazione di un oggetto Automobile<br>
+                    Automobile auto1 = new Automobile("Toyota", "Corolla", 2020);<br>
+                    
+                    // Accesso agli attributi e ai metodi dell'oggetto<br>
+                    System.out.println("Marca: " + auto1.marca);<br>
+                    System.out.println("Modello: " + auto1.modello);<br>
+                    System.out.println("Anno: " + auto1.anno);<br>
+                    auto1.accendi(); // Chiamata al metodo accendi()<br>
+                }<br>
+            }<br>
+            
+        </code>
+    <h2>Ereditarietà</h2>
+    <p>L'ereditarietà è un concetto chiave della programmazione orientata agli oggetti in Java, che consente la creazione di nuove classi basate su classi esistenti.</p>
+    <h3>Superclasse e Sottoclasse:</h3>
+    <p>Una classe può essere estesa da un'altra classe, che diventa la sottoclasse. La classe originaria è chiamata superclasse.</p>
+    <p>
+        <code class="code">
+            // Superclasse <br>
+            public class Veicolo {<br>
+                String marca;<br>
+
+                public Veicolo(String marca) {<br>
+                    this.marca = marca;<br>
+                }<br>
+
+                public void accelerare() {<br>
+                    System.out.println("Veicolo in accelerazione");<br>
+                }<br>
+            }<br>
+
+            // Sottoclasse<br>
+            public class Automobile extends Veicolo {<br>
+                String modello;<br>
+
+                public Automobile(String marca, String modello) {<br>
+                    super(marca); // Richiama il costruttore della superclasse<br>
+                    this.modello = modello;<br>
+                }<br>
+
+                public void frenare() {<br>
+                    System.out.println("Automobile in frenata");<br>
+                }<br>
+            }<br>
+        </code>
+    </p>
+    <h3>Utilizzo dell'ereditarietà:</h3>
+    <p>La sottoclasse eredita tutti gli attributi e i metodi della superclasse, consentendo di estenderne o sovrascriverne il comportamento.</p>
+    <p>
+        <code>
+            public class Main { <br>
+                public static void main(String[] args) {<br>
+                    // Creazione di un oggetto Automobile<br>
+                    Automobile auto = new Automobile("Toyota", "Corolla");<br>
+                    
+                    // Accesso agli attributi e ai metodi della superclasse e sottoclasse<br>
+                    System.out.println("Marca: " + auto.marca); // Ereditato dalla superclasse<br>
+                    System.out.println("Modello: " + auto.modello);<br>
+                    auto.accelerare(); // Ereditato dalla superclasse<br>
+                    auto.frenare(); // Proprio della sottoclasse<br>
+                }<br>
+            }<br>
+        
+        </code>
+    </p>
+    <p>L'ereditarietà favorisce il riuso del codice e la creazione di una gerarchia di classi ben strutturata, migliorando la modularità e la manutenibilità del codice Java.</p>
+    <h2>Array</h2>
+    <p>Un array in Java è una struttura dati che può contenere un insieme ordinato di elementi dello stesso tipo. Gli array sono utilizzati per memorizzare più valori in una singola variabile.</p>
+    <h3>Dichiarazione e Inizializzazione:</h3>
+    <p>È possibile dichiarare e inizializzare un array specificando il tipo degli elementi e la dimensione dell'array.</p>
+    <p>
+        <code class="code">
+            // Dichiarazione e inizializzazione di un array di interi <br>
+            int[] numeri = new int[5]; <br>
+        </code>
+    </p>
+    <h3>Accesso agli Elementi:</h3>
+    <p>Gli elementi di un array possono essere accessati utilizzando l'indice dell'elemento, che inizia da 0.</p>
+    <p>
+        <code class="code">
+            // Accesso agli elementi di un array <br>
+            int primoElemento = numeri[0]; // Primo elemento <br>
+            int secondoElemento = numeri[1]; // Secondo elemento <br>
+        </code>
+    </p>
+    <h3>Dimensione dell'Array:</h3>
+    <p>È possibile ottenere la dimensione di un array utilizzando la proprietà <strong>lenght</strong>.</p>
+    <p>
+        <code class="code">
+            // Dimensione dell'array<br>
+            int lunghezza = numeri.length; // Restituisce 5<br>
+        </code>
+    </p>
+    <h3>Inizializzazione Diretta:</h3>
+    <p>È possibile inizializzare direttamente i valori degli elementi di un array durante la dichiarazione.</p>
+    <p>
+        <code class="code">
+            // Inizializzazione diretta di un array<br>
+            int[] numeri = {1, 2, 3, 4, 5};<br>
+        </code>
+    </p>
+    <p>Gli array sono utilizzati comunemente per gestire collezioni di dati omogenei in Java e forniscono un meccanismo efficiente per l'accesso e la manipolazione di tali dati.</p>
+    <h2>Arraylist</h2>
+    <p>ArrayList è una classe fornita dal framework Java che implementa l'interfaccia List e fornisce un'implementazione dinamica di array. Può contenere elementi duplicati e supporta l'aggiunta, la rimozione e la modifica degli elementi.</p>
+    <h3>Creazione di un ArrayList:</h3>
+    <p>È possibile creare un oggetto ArrayList specificando il tipo degli elementi tra parentesi angolari.</p>
+    <p>
+        <code class="code">
+            // Creazione di un ArrayList di stringhe <br>
+            ArrayList<String> nomi = new ArrayList<>();<br>
+        </code>
+    </p>
+    <h3>Aggiunta di Elementi:</h3>
+    <p>Gli elementi possono essere aggiunti all'ArrayList utilizzando il metodo <strong>add()</strong>.</p>
+    <p>
+        <code class="code">
+            // Aggiunta di elementi all'ArrayList<br>
+            nomi.add("Alice");<br>
+            nomi.add("Bob");<br>
+        </code>
+    </p>
+    <h3>Accesso agli Elementi:</h3>
+    <p>Gli elementi di un ArrayList possono essere accessati utilizzando il metodo <strong>get()</strong> specificando l'indice dell'elemento.</p>
+    <p>
+        <code class="code">
+            // Accesso agli elementi dell'ArrayList<br>
+            String primoNome = nomi.get(0); // Restituisce "Alice"<br>
+            String secondoNome = nomi.get(1); // Restituisce "Bob" <br>            
+        </code>
+    </p>
+    <h3>Dimensione dell'ArrayList:</h3>
+    <p>È possibile ottenere la dimensione dell'ArrayList utilizzando il metodo <strong>size()</strong>.</p>
+    <p>
+        <code class="code">
+            // Dimensione dell'ArrayList <br>
+            int dimensione = nomi.size(); // Restituisce il numero di elementi nell'ArrayList <br>            
+        </code>
+    </p>
+    <h3>Rimozione di Elementi:</h3>
+    <p>Gli elementi possono essere rimossi dall'ArrayList utilizzando il metodo <strong>remove()</strong>.</p>
+    <p>
+        <code class="code">
+            // Rimozione di un elemento dall'ArrayList <br>
+            nomi.remove("Alice"); <br>
+        </code>
+    </p>
+    <p>ArrayList fornisce un'implementazione dinamica di array in Java, consentendo l'aggiunta e la rimozione di elementi in modo efficiente. È ampiamente utilizzato per gestire collezioni di dati dinamiche.</p>
+    <h2>Try-Catch block</h2>
+    <p>Il blocco try-catch in Java è utilizzato per gestire le eccezioni, ovvero situazioni anomale che si verificano durante l'esecuzione di un programma. Consente di catturare un'eccezione e gestirla in modo appropriato, impedendo che interrompa l'esecuzione del programma.</p>
+    <h3>Sintassi:</h3>
+    <p>Il blocco try-catch è costituito da due parti: il blocco try, che contiene il codice che potrebbe generare un'eccezione, e uno o più blocchi catch, che gestiscono le eccezioni catturate.</p>
+    <p>
+        <code class="code">
+            try { <br>
+                // Codice che potrebbe generare un'eccezione <br>
+            } catch (TipoEccezione nomeEccezione) { <br>
+                // Gestione dell'eccezione <br>
+            } <br>
+        </code>
+    </p>
+    <h3>Esempio:</h3>
+    <p>Nel seguente esempio, il blocco try tenta di dividere due numeri. Se l'operazione di divisione genera un'eccezione di tipo <strong>ArithmeticException</strong>, il blocco catch la cattura e stampa un messaggio di errore.</p>
+    <p>
+        <code class="code">
+            try { <br>
+                int risultato = 10 / 0; // Divisione per zero<br>
+            } catch (ArithmeticException e) {<br>
+                System.out.println("Errore: Divisione per zero");<br>
+            }<br>            
+        </code>
+    </p>
+    <h3>Finally Block:</h3>
+    <p>È possibile utilizzare un blocco finally opzionale che viene eseguito sempre, indipendentemente dall'eventuale generazione di un'eccezione. È utile per eseguire operazioni di pulizia, come la chiusura di risorse aperte.</p>
+    <p>
+        <code class="code">
+            try { <br>
+                // Codice che potrebbe generare un'eccezione<br>
+            } catch (TipoEccezione nomeEccezione) {<br>
+                // Gestione dell'eccezione<br>
+            } finally {<br>
+                // Codice eseguito sempre<br>
+            }<br>          
+        </code>
+    </p>
+    <p>Il blocco try-catch è uno strumento fondamentale per la gestione delle eccezioni in Java, consentendo di scrivere codice robusto e resiliente che gestisce situazioni impreviste in modo appropriato.</p>
+    <h2>Input/Output</h2>
+    <p>L'Input/Output (I/O) in Java si riferisce al processo di lettura da input e scrittura su output, come la console o i file.</p>
+    <h3>Lettura da Input Standard:</h3>
+    <p>Per leggere input dalla console, si può utilizzare la classe Scanner.</p>
+    <p>
+        <code class="code">
+            import java.util.Scanner; <br>
+
+            Scanner scanner = new Scanner(System.in);<br>
+            System.out.println("Inserisci un numero:");<br>
+            int numero = scanner.nextInt();<br>
+            System.out.println("Hai inserito: " + numero);<br>
+        </code>
+    </p>
+    <h3>Scrittura su Output Standard:</h3>
+    <p>Per scrivere output sulla console, si utilizza l'oggetto System.out.</p>
+    <p>
+        <code class="code">
+            System.out.println("Hello, world!"); <br>
+        </code>
+    </p>
+    <h3>Lettura e Scrittura su File:</h3>
+    <p>È possibile leggere e scrivere dati su file utilizzando le classi FileReader e FileWriter.</p>
+    <p>
+        <code class="code">
+            import java.io.FileReader; <br>
+            import java.io.FileWriter;<br>
+            import java.io.IOException;<br>
+            
+            try {<br>
+                FileWriter writer = new FileWriter("file.txt");<br>
+                writer.write("Hello, world!");<br>
+                writer.close();<br>
+            
+                FileReader reader = new FileReader("file.txt");<br>
+                int carattere;<br>
+                while ((carattere = reader.read()) != -1) {<br>
+                    System.out.print((char) carattere);<br>
+                }<br>
+                reader.close();<br>
+            } catch (IOException e) {<br>
+                e.printStackTrace();<br>
+            }<br>
+        </code>
+    </p>
+    <p>Java fornisce una varietà di classi e metodi per gestire l'I/O, consentendo di leggere e scrivere dati da diverse fonti e destinazioni in modo efficiente.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIARIO DEL PROGRAMMATORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand">
+        <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
+        <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
+    </div>
+</header>
+
+<div class="legend-container">
+    <div class="legend-toggle">Argomenti del tutorial</div>
+    <div class="legend-content">
+        <ul>
+            <li>Introduzione al linguaggio C</li>
+            <li>Struttura di base del programma C</li>
+            <li>Variabili e tipi di dati</li>
+            <li>Input e output</li>
+            <li>Operatori e espressioni</li>
+            <li>Strutture di controllo</li>
+            <li>Funzioni</li>
+            <li>Array e stringhe</li>
+            <li>File I/O</li>
+        </ul>
+    </div>
+</div>
+
+<div class="tutorial-container">
+    <h2>Introduzione al linguaggio C</h2>
+    <p>Benvenuto alla sezione "Introduzione a C" del nostro tutorial! In questa parte, esploreremo i concetti di base del linguaggio di programmazione C.</p>
+    <h3>Cosa è il linguaggio C?</h3>
+    <p>Il linguaggio C è un linguaggio di programmazione ad alto livello ampiamente utilizzato e diffuso. Creato da Dennis Ritchie negli anni '70 presso i Bell Labs, il linguaggio C è apprezzato per la sua efficienza, la sua portabilità e la sua capacità di fornire un controllo a basso livello sul sistema. È uno dei linguaggi più utilizzati per lo sviluppo di sistemi operativi, applicazioni di sistema e software embedded.</p>
+    <h3>Scopi principali del linguaggio C:</h3>
+    <p> 
+        <ul>
+            <li>Sviluppo di sistemi operativi</li>
+            <li>Programmazione di dispositivi embedded</li>
+            <li>Realizzazione di applicazioni di sistema</li>
+            <li>Scrittura di librerie e utility di sistema</li>
+        </ul>
+    </p>
+    <h3>Caratteristiche fondamentali:</h3>
+    <p> 
+        <ul>
+            <li>Sintassi semplice e flessibile</li>
+            <li>Controllo diretto sulla memoria</li>
+            <li>Portabilità su diverse piattaforme hardware e software</li>
+            <li>Ampio supporto per la programmazione strutturata</li>
+            <li>Vasta libreria standard</li>
+        </ul>
+    </p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+    
+    <h2>Struttura di base del programma C</h2>
+    <p>La struttura di base di un programma in linguaggio C è composta da diversi elementi essenziali che definiscono il flusso e il comportamento del programma. Ecco una panoramica di questi elementi:</p>
+    <p> 
+        <ul>
+            <li><strong>Definizione delle librerie:</strong> Inizialmente, un programma C include le librerie necessarie per accedere a funzionalità specifiche. Le librerie vengono incluse utilizzando la direttiva #include.</li>
+            <li><strong>Funzione principale main():</strong> Ogni programma C deve contenere una funzione principale chiamata <strong>main()</strong>. Questa funzione è il punto di ingresso del programma, da cui inizia l'esecuzione. La funzione <strong>main()</strong> restituisce un valore intero che indica lo stato di uscita del programma.</li>
+            <li><strong>Corpo del programma:</strong> All'interno della funzione <strong>main()</strong>, è possibile definire le istruzioni e le operazioni che il programma deve eseguire. Il corpo del programma è costituito da una sequenza di istruzioni C, che vengono eseguite nell'ordine in cui compaiono.</li>
+        </ul>
+    </p>
+    <p>Ecco un esempio di una struttura di base di un programma C:</p>
+    
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt;<br>
+
+            int main() { <br>
+                // Corpo del programma <br>
+                printf("Hello, world!\n"); <br>
+                return 0; <br>
+            } <br>
+        </code>
+    </p>
+
+    <p>In questo esempio, il programma include la libreria <strong>stdio.h</strong>, definisce la funzione <strong>main()</strong> come punto di ingresso e stampa "Hello, world!" sulla console utilizzando la funzione <strong>printf()</strong>.</p>
+    <p>Questo è solo un'introduzione alla struttura di base di un programma C. Negli argomenti successivi, esploreremo in dettaglio ogni parte di questa struttura e come utilizzare il linguaggio C per creare programmi complessi e efficienti.</p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+
+    <h2>Variabili e tipi di dati</h2>
+    <p>Nel linguaggio C, le variabili sono elementi fondamentali utilizzati per memorizzare e manipolare dati all'interno di un programma. Ogni variabile ha un tipo di dato associato, che determina il tipo di valore che può contenere e le operazioni che possono essere eseguite su di esso.</p>
+    <p>Ci sono diversi tipi di dati di base nel linguaggio C, ciascuno dei quali è utilizzato per memorizzare un tipo specifico di valore:</p>
+    <p> 
+        <ul>
+            <li><strong>Int:</strong> Il tipo <strong>int</strong> viene utilizzato per memorizzare numeri interi, come -3, 0, o 42.</li>
+            <li><strong>Char:</strong> Il tipo <strong>char</strong> viene utilizzato per memorizzare singoli caratteri, come 'a', 'B', o '$'.</li>
+            <li><strong>Float:</strong> Il tipo <strong>float</strong> viene utilizzato per memorizzare numeri decimali a precisione singola, come 3.14 o -0.001.</li>
+            <li><strong>Double:</strong> Il tipo <strong>double</strong> viene utilizzato per memorizzare numeri decimali a precisione doppia, offrendo una maggiore precisione rispetto ai float.</li>
+        </ul>
+    </p>
+    <p>Ecco un esempio di dichiarazione e stampa delle variabili:</p>
+    <p>&nbsp;</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    // Dichiarazione e inizializzazione di variabili <br>
+                    int numero = 10; <br>
+                    float altezza = 1.75; <br>
+                
+                    // Stampare il valore delle variabili <br>
+                    printf("Il valore di numero: %d\n", numero); <br>
+                    printf("Il valore di altezza: %.2f\n", altezza); <br>
+                
+                    return 0; <br>
+                }
+        </code>
+    </p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+
+    <h2>Input e output</h2>
+    <p>In linguaggio C, l'input e l'output sono gestiti principalmente utilizzando le funzioni della libreria standard <strong>stdio.h</strong>. Ecco come puoi leggere input dall'utente e stampare output sulla console:</p>
+    <h3>Lettura di input dall'utente:</h3>
+    <p>Per leggere input dall'utente, puoi utilizzare la funzione scanf(), che consente di acquisire input da tastiera in base al formato specificato.</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    int numero; <br>
+                    
+                    printf("Inserisci un numero: "); <br>
+                    scanf("%d", &numero); // Legge un numero intero da tastiera <br>
+                    
+                    printf("Hai inserito: %d\n", numero); <br>
+                    
+                    return 0; <br>
+                }
+        </code>
+    </p>
+    <h3>Output su console:</h3>
+    <p>Per stampare output sulla console, puoi utilizzare la funzione <strong>printf()</strong>, che consente di formattare e stampare dati su console.</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    printf("Hello, world!\n"); <br>
+                    return 0; <br>
+                }
+        </code>
+    </p>
+    <p>Questi sono solo esempi di base di come gestire input e output in C utilizzando le funzioni <strong>scanf()</strong> e <strong>printf()</strong>. Esistono molte altre funzioni e tecniche per gestire input/output in C, che potrai esplorare ulteriormente mentre acquisisci familiarità con il linguaggio.</p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+
+    <h2>Operatori e espressioni</h2>
+    <p>Gli operatori in C sono simboli speciali utilizzati per eseguire operazioni su variabili e valori. Le espressioni sono combinazioni di operatori e operandi che producono un valore.</p>
+    <h3>Operatori Aritmetici:</h3>
+    <p>Gli operatori aritmetici eseguono operazioni matematiche su operandi.</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    int a = 10, b = 5; <br>
+                    
+                    int somma = a + b; <br>
+                    int differenza = a - b; <br>
+                    int prodotto = a * b; <br>
+                    int divisione = a / b; <br>
+                    int resto = a % b; <br>
+                    <br>
+                    printf("Somma: %d\n", somma); <br>
+                    printf("Differenza: %d\n", differenza); <br>
+                    printf("Prodotto: %d\n", prodotto); <br>
+                    printf("Divisione: %d\n", divisione); <br>
+                    printf("Resto: %d\n", resto); <br>
+                    
+                    return 0; <br>
+                }
+        </code>
+    </p>
+    <h3>Operatori Relazionali:</h3>
+    <p>Gli operatori relazionali confrontano due valori e restituiscono un valore booleano (vero o falso).</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    int a = 10, b = 5; <br>
+                    
+                    printf("a > b: %d\n", a > b); <br>
+                    printf("a < b: %d\n", a < b); <br>
+                    printf("a >= b: %d\n", a >= b); <br>
+                    printf("a <= b: %d\n", a <= b); <br>
+                    printf("a == b: %d\n", a == b); <br>
+                    printf("a != b: %d\n", a != b); <br>
+                    
+                    return 0; <br>
+                }
+                
+        </code>
+    </p>
+    <p>Questi sono solo alcuni esempi di operatori e espressioni in C. Esistono anche operatori logici, bitwise e di assegnazione che è possibile utilizzare per manipolare dati in C.</p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+
+    <h2>Strutture di controllo</h2>
+    <p>Le strutture di controllo in C sono utilizzate per gestire il flusso di esecuzione del programma. Le principali strutture di controllo includono if-else, while, for e switch.</p>
+    <h3>if-else:</h3>
+    <p>La struttura if-else permette di eseguire un blocco di istruzioni se una condizione è vera e un altro blocco se è falsa.</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    int x = 10; <br>
+                
+                    if (x > 5) { <br>
+                        printf("x è maggiore di 5\n"); <br>
+                    } else { <br>
+                        printf("x non è maggiore di 5\n"); <br>
+                    } <br>
+                
+                    return 0; <br>
+                } <br>
+                
+        </code>
+    </p>
+    <h3>while:</h3>
+    <p>La struttura while esegue un blocco di istruzioni finché una condizione è vera.</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    int i = 0; <br>
+                
+                    while (i < 5) { <br>
+                        printf("%d\n", i); <br>
+                        i++; <br>
+                    } <br>
+                
+                    return 0; <br>
+                } <br>
+        </code>
+    </p>
+    <h3>for:</h3>
+    <p>La struttura for è utile per eseguire un blocco di istruzioni un numero specificato di volte.</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    for (int i = 0; i < 5; i++) { <br>
+                        printf("%d\n", i); <br>
+                    } <br>
+                
+                    return 0; <br>
+                } <br>
+                
+        </code>
+    </p>
+    <h3>switch:</h3>
+    <p>La struttura switch permette di eseguire diverse azioni in base al valore di una variabile.</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    int scelta = 2; <br>
+                
+                    switch (scelta) { <br>
+                        case 1: <br>
+                            printf("Hai scelto l'opzione 1\n"); <br>
+                            break; <br>
+                        case 2: <br>
+                            printf("Hai scelto l'opzione 2\n"); <br>
+                            break; <br>
+                        default: <br>
+                            printf("Scelta non valida\n"); <br>
+                    } <br>
+                
+                    return 0; <br>
+                } <br>
+        </code>
+    </p>
+    <p>Questi sono solo alcuni esempi di strutture di controllo in C. Possono essere combinati e annidati per creare flussi di esecuzione più complessi.</p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+
+    <h2>Funzioni</h2>
+    <p>Le funzioni sono blocchi di codice che eseguono una specifica operazione. In C, le funzioni sono fondamentali per organizzare e strutturare il codice in unità più piccole e riutilizzabili. Una funzione può accettare input, elaborare i dati e restituire un risultato. Ecco un'esempio di dichiarazione e definizione di una funzione in C:</p>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                // Dichiarazione della funzione <br>
+                int somma(int a, int b); <br>
+                
+                int main() { <br>
+                    int num1 = 5; <br>
+                    int num2 = 3; <br>
+                    int risultato; <br>
+                
+                    // Chiamata alla funzione <br>
+                    risultato = somma(num1, num2); <br>
+                
+                    printf("La somma di %d e %d è %d\n", num1, num2, risultato); <br>
+                
+                    return 0; <br>
+                } <br>
+                
+                // Definizione della funzione <br>
+                int somma(int a, int b) { <br>
+                    return a + b; <br>
+                } <br>
+                
+        </code>
+    </p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+
+    <h2>Array e stringhe</h2>
+    <p>Gli array sono una collezione di elementi dello stesso tipo dati, accessibili mediante un indice numerico. Le stringhe in C sono semplicemente array di caratteri terminati da un carattere nullo '\0'.</p>
+    <h3>Definizione e Inizializzazione di Array:</h3>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+
+                int main() { <br>
+                    // Definizione e inizializzazione di un array di interi <br>
+                    int numeri[5] = {1, 2, 3, 4, 5}; <br>
+                
+                    // Definizione e inizializzazione di un array di caratteri (stringa) <br>
+                    char parola[] = "Ciao"; <br>
+                
+                    // Accesso agli elementi dell'array e stampa <br>
+                    printf("Primo elemento dell'array numeri: %d\n", numeri[0]); <br>
+                    printf("Secondo elemento dell'array numeri: %d\n", numeri[1]); <br>
+                    printf("Stringa: %s\n", parola); <br>
+                
+                    return 0; <br>
+                } <br>
+                
+        </code>
+    </p>
+    <h3>Operazioni sugli Array e sulle Stringhe:</h3>
+    <p>
+        <code class="code">
+            #include &lt;stdio.h&gt; <br>
+                #include &lt;string.h&gt; <br>
+                
+                int main() { <br>
+                    // Concatenazione di stringhe <br>
+                    char stringa1[20] = "Buongiorno"; <br>
+                    char stringa2[] = " mondo!"; <br>
+                    strcat(stringa1, stringa2); <br>
+                    printf("Concatenazione: %s\n", stringa1); <br>
+                
+                    // Lunghezza di una stringa <br>
+                    char stringa3[] = "Ciao"; <br>
+                    printf("Lunghezza della stringa: %lu\n", strlen(stringa3)); <br>
+                
+                    // Copia di una stringa <br>
+                    char origine[] = "Origine"; <br>
+                    char destinazione[20]; <br>
+                    strcpy(destinazione, origine); <br>
+                    printf("Copia della stringa: %s\n", destinazione); <br>
+                
+                    // Altre operazioni sugli array e sulle stringhe... <br>
+                    
+                    return 0; <br>
+                } <br>
+                
+        </code>
+    </p>
+    <p>&nbsp;</p>
+    <p>Gli array e le stringhe sono fondamentali in C e vengono utilizzati in una vasta gamma di applicazioni. Saperli utilizzare correttamente è essenziale per sviluppare applicazioni efficienti e robuste.</p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+
+    <h2>File I/O</h2>
+    <p>In C, è possibile leggere da file e scrivere su file utilizzando le funzioni standard di input/output. Questo è utile per leggere dati da file di testo, elaborarli e scrivere i risultati su file.</p>
+    <h3>Lettura da un File:</h3>
+    <p>Per leggere da un file in C, è necessario seguire i seguenti passaggi:</p>
+    <p> 
+        <ul>
+            <li>Aprire il file utilizzando la funzione <strong>fopen()</strong>.</li>
+            <li>Leggere i dati dal file utilizzando le funzioni <strong>fscanf()</strong> o <strong>fgets()</strong>.</li>
+            <li>Chiudere il file utilizzando la funzione <strong>fclose()</strong>.</li>
+        </ul>
+    </p>
+</div>
+
+</body>
+
+</html>

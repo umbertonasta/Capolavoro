@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIARIO DEL PROGRAMMATORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand">
+        <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
+        <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
+    </div>
+</header>
+
+<div class="legend-container">
+    <div class="legend-toggle">Argomenti del tutorial</div>
+    <div class="legend-content">
+        <ul>
+            <li>Introduzione a JavaScript</li>
+            <li>Sintassi di JavaScript</li>
+            <li>Operatori</li>
+            <li>Strutture di controllo</li>
+            <li>Funzioni</li>
+            <li>Oggetti</li>
+            <li>Array</li>
+            <li>Gestione degli errori</li>
+        </ul>
+    </div>
+</div>
+
+<div class="tutorial-container">
+    <h2>Introduzione a Javascript:</h2>
+    <p>JavaScript è un linguaggio di programmazione ad alto livello, interpretato e orientato agli oggetti, comunemente utilizzato per creare siti web dinamici e applicazioni web interattive.</p>
+    <h3>Caratteristiche principali:</h3>
+    <ul>
+        <li>Linguaggio client-side: eseguito all'interno del browser web del cliente.</li>
+        <li>Linguaggio interpretato: non richiede una compilazione esplicita.</li>
+        <li>Orientato agli oggetti: supporta la programmazione orientata agli oggetti.</li>
+        <li>Multi-paradigma: supporta sia paradigmi di programmazione imperativi che funzionali.</li>
+        <li>Estensibilità: ampio ecosistema di librerie e framework.</li>
+    </ul>
+    <h3>Utilizzo:</h3>
+    <p>JavaScript è ampiamente utilizzato per aggiungere comportamenti dinamici alle pagine web, come la manipolazione del DOM, la gestione degli eventi, le animazioni, le richieste asincrone (AJAX), la validazione dei dati nei form e molto altro.</p>
+    <p>JavaScript è un linguaggio potente e flessibile che ha trasformato il modo in cui le persone interagiscono con i siti web e le applicazioni web. Con una vasta comunità di sviluppatori e una continua evoluzione, JavaScript rimane uno strumento essenziale per la creazione di esperienze web coinvolgenti e innovative.</p>
+    <h2>Sintassi</h2>
+    <p>La sintassi di JavaScript è relativamente semplice e segue alcune regole di base.</p>
+    <h3>Case Sensitivity:</h3>
+    <p>JavaScript è case-sensitive, il che significa che fa distinzione tra maiuscole e minuscole.</p>
+    <p>
+        <code class="code">
+            var nomeVariabile = "valore"; <br>
+            var NomeVariabile = "valore diverso"; <br>            
+        </code>
+    </p>
+    <h3>Punto e virgola:</h3>
+    <p>Anche se non sempre obbligatorio, è consigliabile terminare ogni istruzione con un punto e virgola.</p>
+    <p>
+        <code class="code">
+            var x = 5; <br>
+            console.log(x); <br>            
+        </code>
+    </p>
+    <h3>Commenti:</h3>
+    <p>I commenti in JavaScript possono essere singola riga o multilinea.</p>
+    <p>
+        <code class="code">
+            // Questo è un commento singola riga <br>
+
+            /* <br>
+            Questo è un commento <br>
+            multilinea <br>
+            */ <br>            
+        </code>
+    </p>
+    <h3>Dichiarazione di Variabili:</h3>
+    <p>Le variabili possono essere dichiarate utilizzando <strong>var</strong>, <strong>let</strong>, o <strong>const</strong>.</p>
+    <p>
+        <code class="code">
+            var x = 5; <br>
+            let y = 10; <br>
+            const z = 15; <br>            
+        </code>
+    </p>
+    <h3>Tipi di Dati:</h3>
+    <p>JavaScript supporta diversi tipi di dati, tra cui numeri, stringhe, booleani, oggetti, array, null e undefined.</p>
+    <p>
+        <code class="code">
+            var numero = 10;<br>
+            var stringa = "Test";<br>
+            var booleano = true;<br>
+            var oggetto = { nome: "John", età: 30 };<br>
+            var array = [1, 2, 3];<br>
+            var nullo = null;<br>
+            var nonDefinito = undefined; <br>            
+        </code>
+    </p>
+    <h3>Operatori:</h3>
+    <p>JavaScript supporta vari operatori per eseguire operazioni aritmetiche, di confronto, logiche e altre.</p>
+    <p>
+        <code class="code">
+            var somma = 5 + 3; <br>
+            var maggioreDi = 10 > 5; <br>
+            var andLogico = true && false; <br>            
+        </code>
+    </p>
+    <p>Questi sono solo alcuni concetti di base della sintassi di JavaScript. La pratica è essenziale per acquisire familiarità con la sintassi e diventare competenti nello sviluppo JavaScript.</p>
+    <h2>Operatori:</h2>
+    <p>Gli operatori in JavaScript sono simboli speciali utilizzati per eseguire operazioni su operandi (valori o variabili).</p>
+    <h3>Operatori Aritmetici:</h3>
+    <p>Eseguono operazioni matematiche tra due valori.</p>
+    <p>
+        <code class="code">
+            var somma = 5 + 3;    // Addizione <br>
+            var differenza = 10 - 5;  // Sottrazione <br>
+            var prodotto = 4 * 6; // Moltiplicazione <br>
+            var divisione = 20 / 4;   // Divisione <br>
+            var resto = 10 % 3;   // Resto della divisione <br>
+            var incremento = 5;   // Incremento <br>
+            incremento++;         // incremento diventa 6 <br>
+            var decremento = 10;  // Decremento <br>
+            decremento--;         // decremento diventa 9 <br>            
+        </code>
+    </p>
+    <h3>Operatori di Assegnazione:</h3>
+    <p>Assegnano un valore a una variabile.</p>
+    <p>
+        <code class="code">
+            var x = 10;   // Assegna il valore 10 a x <br>
+            var y = 5; <br>
+            y += 3;       // Equivalente a y = y + 3, y diventa 8 <br>            
+        </code>
+    </p>
+    <h3>Operatori di Confronto:</h3>
+    <p>Confrontano due valori e restituiscono un valore booleano.</p>
+    <p>
+        <code class="code">
+            var maggioreDi = 10 > 5;     // true <br>
+            var minoreDi = 5 < 3;        // false <br>
+            var ugualeA = 5 === "5";     // false (uguale valore e tipo) <br>
+            var diversoDa = 10 !== 5;    // true (diverso valore o tipo) <br>            
+        </code>
+    </p>
+    <h3>Operatori Logici:</h3>
+    <p>Eseguono operazioni logiche su valori booleani.</p>
+    <p>
+        <code class="code">
+            var andLogico = true && false;   // false <br>
+            var orLogico = true || false;    // true <br>
+            var notLogico = !true;           // false <br>            
+        </code>
+    </p>
+    <h3>Operatore Ternario:</h3>
+    <p>Un operatore condizionale che assegna un valore a una variabile in base a una condizione.</p>
+    <p>
+        <code class="code">
+            var risultato = (10 > 5) ? "Vero" : "Falso";   // Vero <br>
+        </code>
+    </p>
+    <p>Gli operatori in JavaScript sono fondamentali per eseguire operazioni su variabili e valori, consentendo di creare logica complessa nei programmi.</p>
+    <h2>Strutture di controllo</h2>
+    <p>Le strutture di controllo in JavaScript sono utilizzate per gestire il flusso di esecuzione del codice.</p>
+    <h3>if...else:</h3>
+    <p>Consente di eseguire un blocco di codice se una condizione è vera e un altro blocco di codice se la condizione è falsa.</p>
+    <p>
+        <code class="code">
+            var x = 10; <br>
+            if (x > 5) { <br>
+              console.log("x è maggiore di 5"); <br>
+            } else { <br>
+              console.log("x non è maggiore di 5"); <br>
+            } <br>            
+        </code>
+    </p>
+    <h3>switch:</h3>
+    <p>Consente di eseguire un blocco di codice tra molti blocchi di codice.</p>
+    <p>
+        <code class="code">
+            var giorno = "Lunedi"; <br>
+            switch (giorno) { <br>
+              case "Lunedi":<br>
+                console.log("Primo giorno della settimana"); <br>
+                break; <br>
+              case "Martedi": <br>
+                console.log("Secondo giorno della settimana"); <br>
+                break; <br>
+              default: <br>
+                console.log("Altro giorno della settimana"); <br>
+            } <br>            
+        </code>
+    </p>
+    <h3>Cicli:</h3>
+    <p>I cicli vengono utilizzati per eseguire lo stesso blocco di codice più volte.</p>
+    <h3>for:</h3>
+    <p>Esegue un blocco di codice un numero definito di volte.</p>
+    <p>
+        <code class="code">
+            for (var i = 0; i < 5; i++) { <br>
+                console.log("Iterazione " + i); <br>
+              } <br>              
+        </code>
+    </p>
+    <h3>while:</h3>
+    <p>Esegue un blocco di codice finché una condizione specificata è vera.</p>
+    <p>
+        <code class="code">
+            var i = 0; <br>
+            while (i < 5) { <br>
+              console.log("Iterazione " + i); <br>
+              i++; <br>
+            } <br>            
+        </code>
+    </p>
+    <h3>do...while:</h3>
+    <p>Esegue un blocco di codice almeno una volta e poi ripete l'esecuzione fino a quando una condizione specificata è vera.</p>
+    <p>
+        <code class="code">
+            var i = 0; <br>
+            do { <br>
+              console.log("Iterazione " + i); <br>
+              i++; <br>
+            } while (i < 5); <br>            
+        </code>
+    </p>
+    <p>Le strutture di controllo sono essenziali per la creazione di logica complessa nei programmi JavaScript, consentendo di gestire condizioni e cicli in modo efficiente.</p>
+    <h2>Funzioni</h2>
+    <p>Le funzioni in JavaScript sono blocchi di codice riutilizzabili che eseguono un'azione o calcolano un valore.</p>
+    <h3>Dichiarazione di una Funzione:</h3>
+    <p>Le funzioni possono essere dichiarate utilizzando la parola chiave <strong>function</strong>.</p>
+    <p>
+        <code class="code">
+            function saluta() { <br>
+                console.log("Ciao!"); <br>
+              } <br>              
+        </code>
+    </p>
+    <h3>Chiamata di una Funzione:</h3>
+    <p>Le funzioni vengono chiamate eseguendo il loro nome seguito da parentesi tonde.</p>
+    <p>
+        <code class="code">
+            saluta(); // Output: Ciao! <br>
+        </code>
+    </p>
+    <h3>Parametri delle Funzioni:</h3>
+    <p>Le funzioni possono accettare input chiamati parametri.</p>
+    <p>
+        <code class="code">
+            function saluta(nome) { <br>
+                console.log("Ciao, " + nome + "!"); <br>
+              } <br>
+              
+              saluta("Mario"); // Output: Ciao, Mario! <br>              
+        </code>
+    </p>
+    <h3>Valore di Ritorno:</h3>
+    <p>Le funzioni possono restituire un valore utilizzando la parola chiave <strong>return</strong>.</p>
+    <p>
+        <code class="code">
+            function somma(a, b) { <br>
+                return a + b; <br>
+              } <br>
+              
+              var risultato = somma(3, 5); // risultato sarà 8 <br>            
+        </code>
+    </p>
+    <h3>Funzioni Anonime:</h3>
+    <p>Le funzioni anonime non hanno un nome e possono essere assegnate a variabili o passate come argomenti ad altre funzioni.</p>
+    <p>
+        <code class="code">
+            var saluta = function(nome) { <br>
+                console.log("Ciao, " + nome + "!"); <br>
+              }; <br>
+              
+              saluta("Giulia"); // Output: Ciao, Giulia! <br>              
+        </code>
+    </p>
+    <h3>Arrow Function:</h3>
+    <p>Una sintassi più concisa per dichiarare funzioni anonime.</p>
+    <p>
+        <code class="code">
+            var saluta = (nome) => { <br>
+                console.log("Ciao, " + nome + "!"); <br>
+              }; <br>
+              
+              saluta("Luca"); // Output: Ciao, Luca! <br>              
+        </code>
+    </p>
+    <p>Le funzioni sono uno dei concetti fondamentali della programmazione in JavaScript e consentono di organizzare il codice in blocchi riutilizzabili e modulari.</p>
+    <h2>Oggetti</h2>
+    <p>Gli oggetti in JavaScript sono contenitori per un insieme di proprietà correlate, definite da coppie chiave-valore.</p>
+    <h3>Dichiarazione di un Oggetto:</h3>
+    <p>Gli oggetti possono essere creati utilizzando le parentesi graffe <strong>{}</strong> e definendo le loro proprietà all'interno.</p>
+    <p>
+        <code class="code">
+            var persona = { <br>
+                nome: "Mario", <br>
+                età: 30, <br>
+                professione: "Ingegnere" <br>
+              }; <br>              
+        </code>
+    </p>
+    <h3>Accesso alle Proprietà:</h3>
+    <p>Le proprietà di un oggetto possono essere accedute utilizzando la notazione a punto . o la notazione a chiave <strong>[ ]</strong>.</p>
+    <p>
+        <code class="code">
+            console.log(persona.nome);  // Output: Mario <br>
+            console.log(persona["età"]); // Output: 30 <br>            
+        </code>
+    </p>
+    <h3>Modifica delle Proprietà:</h3>
+    <p>Le proprietà di un oggetto possono essere modificate o aggiunte assegnando un nuovo valore.</p>
+    <p>
+        <code class="code">
+            persona.professione = "Architetto"; <br>
+            persona["età"] = 35; <br>            
+        </code>
+    </p>
+    <h3>Iterazione sugli Oggetti:</h3>
+    <p>Le proprietà di un oggetto possono essere iterate utilizzando un ciclo <strong>for...in</strong>.</p>
+    <p>
+        <code class="code">
+            for (var key in persona) { <br>
+                console.log(key + ": " + persona[key]); <br>
+              } <br>    
+        </code>
+    </p>
+    <h3>Metodi degli Oggetti:</h3>
+    <p>Le funzioni all'interno degli oggetti sono chiamate metodi.</p>
+    <p>
+        <code class="code">
+            var persona = { <br>
+                nome: "Mario", <br>
+                saluta: function() { <br>
+                  console.log("Ciao, sono " + this.nome); <br>
+                } <br>
+              }; <br>
+              
+              persona.saluta(); // Output: Ciao, sono Mario <br>              
+        </code>
+    </p>
+    <p>Gli oggetti sono uno dei concetti fondamentali di JavaScript e sono utilizzati ampiamente per organizzare e manipolare dati in modo strutturato.</p>
+    <h2>Array</h2>
+    <p>Gli array in JavaScript sono oggetti adatti per memorizzare una sequenza ordinata di valori.</p>
+    <h3>Dichiarazione di un Array:</h3>
+    <p>Gli array possono essere creati utilizzando le parentesi quadre <strong>[]</strong> e definendo i loro elementi all'interno.</p>
+    <p>
+        <code class="code">
+            var numeri = [1, 2, 3, 4, 5]; <br>
+            var frutta = ["Mela", "Banana", "Arancia"]; <br>      
+        </code>
+    </p>
+    <h3>Accesso agli Elementi:</h3>
+    <p>Gli elementi di un array possono essere accessi utilizzando la loro posizione, o indice, all'interno delle parentesi quadre.</p>
+    <p>
+        <code class="code">
+            console.log(numeri[0]); // Output: 1 <br>
+            console.log(frutta[1]);  // Output: Banana <br>            
+        </code>
+    </p>
+    <h3>Modifica degli Elementi:</h3>
+    <p>Gli elementi di un array possono essere modificati o aggiunti assegnando un nuovo valore alla loro posizione.</p>
+    <p>
+        <code class="code">
+            numeri[2] = 10; <br>
+            frutta.push("Uva"); <br>            
+        </code>
+    </p>
+    <h3>Iterazione sugli Array:</h3>
+    <p>Gli elementi di un array possono essere iterati utilizzando un ciclo <strong>for</strong> o <strong>forEach</strong>.</p>
+    <p>
+        <code class="code">
+            for (var i = 0; i < numeri.length; i++) { <br>
+                console.log(numeri[i]); <br>
+              } <br>
+              
+              frutta.forEach(function(frutto) { <br>
+                console.log(frutto); <br>
+              }); <br>              
+        </code>
+    </p>
+    <h3>Metodi degli Array:</h3>
+    <p>Gli array in JavaScript dispongono di vari metodi integrati per eseguire operazioni comuni come aggiungere, rimuovere, filtrare o trasformare elementi.</p>
+    <p>
+        <code class="code">
+            numeri.push(6);       // Aggiunge un elemento alla fine dell'array <br>
+            frutta.pop();         // Rimuove l'ultimo elemento dall'array <br>
+            frutta.splice(1, 1);  // Rimuove un elemento in base all'indice <br>
+            var numeriPari = numeri.filter(function(numero) { <br>
+              return numero % 2 === 0; <br>
+            }); // Restituisce un nuovo array contenente solo i numeri pari <br>            
+        </code>
+    </p>
+    <p>Gli array sono una parte fondamentale della programmazione in JavaScript e sono ampiamente utilizzati per memorizzare e manipolare dati in modo efficace.</p>
+    <h2>Gestione degli errori</h2>
+    <p>La gestione degli errori in JavaScript consente di gestire situazioni impreviste durante l'esecuzione del codice</p>
+    <h3>try...catch Statement:</h3>
+    <p>Consente di gestire gli errori in modo controllato, eseguendo un blocco di codice e catturando eventuali errori generati al suo interno.</p>
+    <p>
+        <code class="code">
+            try { <br>
+                // Blocco di codice che potrebbe generare un errore <br>
+                var risultato = numero / 0; // Genera un errore di divisione per zero <br>
+              } catch (errore) { <br>
+                // Blocco di codice per gestire l'errore <br>
+                console.log("Si è verificato un errore: " + errore.message); <br>
+              } <br>              
+        </code>
+    </p>
+    <h3>throw Statement:</h3>
+    <p>Consente di generare manualmente un errore e interrompere l'esecuzione del codice.</p>
+    <p>
+        <code class="code">
+            function divide(numero1, numero2) { <br>
+                if (numero2 === 0) { <br>
+                  throw new Error("Divisione per zero non consentita"); <br>
+                } <br>
+                return numero1 / numero2; <br>
+              } <br>
+              
+              try { <br>
+                var risultato = divide(10, 0); // Genera un errore <br>
+              } catch (errore) { <br>
+                console.log("Si è verificato un errore: " + errore.message); <br>
+              } <br>              
+        </code>
+    </p>
+    <p>La gestione degli errori è fondamentale per garantire la robustezza e l'affidabilità delle applicazioni JavaScript, consentendo di identificare e gestire eventuali problemi durante l'esecuzione del codice.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIARIO DEL PROGRAMMATORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand">
+        <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
+        <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
+    </div>
+</header>
+
+<div class="legend-container">
+    <div class="legend-toggle">Argomenti del tutorial</div>
+    <div class="legend-content">
+        <ul>
+            <li>Introduzione</li>
+            <li>Struttura di base</li>
+            <li>Tag e Elementi</li>
+            <li>Formattazione di testo e contenuti</li>
+            <li>Collegamenti e navigazione</li>
+            <li>Immagini e Multimedia</li>
+            <li>Tabelle e Liste</li>
+            <li>Form e Input Utente</li>
+            <li>Layout e Struttura della pagina</li>
+            <li>Semantica e Accessibilità</li>
+        </ul>
+    </div>
+</div>
+
+<div class="tutorial-container">
+    <h2>Introduzione al linguaggio HTML</h2>
+    <p>HTML, acronimo di HyperText Markup Language, è il linguaggio standard utilizzato per creare e visualizzare pagine web sui browser. È un linguaggio di markup che definisce la struttura e il contenuto di una pagina web utilizzando una serie di tag.</p>
+    <h3>Struttura di Base:</h3>
+    <p>Una pagina HTML è costituita da una serie di elementi HTML racchiusi tra i tag <strong>html</strong> e <strong>html</strong>. La struttura di base di una pagina HTML include anche i tag <strong>head</strong> e <strong>body</strong></p>
+    <p>
+        <code class="code">
+            &lt;!DOCTYPE html&gt; <br>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &lt;head&gt;<br>
+                &lt;title&gt;Titolo della Pagina&lt;/title&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br>
+                &lt;h1&gt;Benvenuti su questa Pagina!&lt;/h1&gt;<br>
+                &lt;p&gt;Questo è un paragrafo di esempio.&lt;/p&gt;<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;         <br>   
+        </code>
+    </p>
+    <h3>Tag e Elementi HTML:</h3>
+    <p>Gli elementi HTML sono costruiti utilizzando una combinazione di tag, attributi e contenuti. I tag HTML sono racchiusi tra parentesi angolari e specificano il tipo di elemento.</p>
+    <p>
+        <code class="code">
+            &lt;p&gt;Questo è un paragrafo di testo.&lt;/p&gt; <br>
+            &lt;a href="https://www.example.com"&gt;Questo è un link&lt;/a&gt;<br>
+            &lt;img src="immagine.jpg" alt="Descrizione dell'immagine"&gt;     <br>       
+        </code>
+    </p>
+    <h3>Semantica e Struttura:</h3>
+    <p>HTML fornisce una serie di tag semantici che definiscono il significato e la struttura del contenuto, come &lt;header&gt;, &lt;footer&gt; , &lt;nav&gt; , &lt;article&gt; , &lt;section&gt; , &lt;aside&gt; , etc.</p>
+    <p>
+        <code class="code">
+            &lt;header&gt;<br>
+            &lt;h1&gt;Intestazione della Pagina&lt;/h1&gt;<br>
+        &lt;/header&gt;<br>
+        &lt;main&gt;<br>
+            &lt;article&gt;<br>
+                &lt;h2&gt;Titolo dell'Articolo&lt;/h2&gt;<br>
+                &lt;p&gt;Contenuto dell'articolo...&lt;/p&gt;<br>
+            &lt;/article&gt;<br>
+        &lt;/main&gt;<br>
+        &lt;footer&gt;<br>
+            &lt;p&gt;Pie di Pagina&lt;/p&gt;<br>
+        &lt;/footer&gt;<br>
+        </code>
+    </p>
+    <p>HTML è il fondamento di ogni pagina web e comprendere la sua sintassi e struttura è essenziale per la creazione di contenuti web efficaci e ben strutturati.</p>
+    <h2>Tag e Elementi</h2>
+    <p>Gli elementi HTML sono costruiti utilizzando una combinazione di tag, attributi e contenuti. I tag HTML sono racchiusi tra parentesi angolari e specificano il tipo di elemento.</p>
+    <h3>Tag di Testo:</h3>
+    <p>Utilizzati per formattare e visualizzare il testo sulla pagina web.</p>
+    <p>
+        <code class="code">
+            &lt;p&gt;Questo è un paragrafo di testo.&lt;/p&gt; <br>
+            &lt;h1&gt;Questo è un titolo di livello 1&lt;/h1&gt; <br>
+            &lt;em&gt;Questo testo è in corsivo&lt;/em&gt; <br>
+            &lt;strong&gt;Questo testo è in grassetto&lt;/strong&gt; <br>         
+        </code>
+    </p>
+    <h3>Tag Multimediali:</h3>
+    <p>Utilizzati per incorporare contenuti multimediali, come immagini e video.</p>
+    <p>
+        <code class="code">
+            &lt;img src="immagine.jpg" alt="Descrizione dell'immagine"&gt; <br>
+            &lt;video src="video.mp4" controls&gt;&lt;/video&gt; <br>
+            &lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt; <br>            
+        </code>
+    </p>
+    <h3>Tag per Collegamenti:</h3>
+    <p>Utilizzati per creare collegamenti ipertestuali.</p>
+    <p>
+        <code class="code">
+            &lt;a href="https://www.example.com"&gt;Questo è un link&lt;/a&gt; <br>
+            &lt;a href="#sezione"&gt;Salta alla sezione&lt;/a&gt; <br>            
+        </code>
+    </p>
+    <h3>Tag per Struttura:</h3>
+    <p>Utilizzati per definire la struttura del documento HTML.</p>
+    <p>
+        <code class="code">
+            &lt;header&gt;Intestazione della Pagina&lt;/header&gt; <br> 
+            &lt;nav&gt;Menu di Navigazione&lt;/nav&gt; <br>
+            &lt;section&gt;Sezione del Contenuto&lt;/section&gt; <br>
+            &lt;footer&gt;Pie di Pagina&lt;/footer&gt; <br>            
+        </code>
+    </p>
+    <h3>Tag per Formulare:</h3>
+    <p>Utilizzati per creare moduli e raccogliere input dagli utenti.</p>
+    <p>
+        <code class="code">
+            &lt;form action="/submit" method="post"&gt;
+            &lt;input type="text" name="username" placeholder="Nome Utente"&gt;
+            &lt;input type="password" name="password" placeholder="Password"&gt;
+            &lt;button type="submit"&gt;Invia&lt;/button&gt;
+            &lt;/form&gt;        
+        </code>
+    </p>
+    <p>I tag HTML forniscono una struttura base per la creazione di pagine web e sono fondamentali per definire il contenuto e il layout di una pagina web.</p>
+    <h2>Formattazione di Testo e Contenuti</h2>
+    <p>La formattazione dei testi e dei contenuti in HTML è possibile grazie a una serie di tag dedicati che permettono di modificare l'aspetto e lo stile del testo.</p>
+    <h3>Paragrafi e Intestazioni:</h3>
+    <p>I tag <strong>p</strong> e <strong>h1</strong> - <strong>h6</strong> sono utilizzati per definire paragrafi e titoli di diversi livelli.</p>
+    <p>
+        <code class="code">
+            &lt;p&gt;Questo è un paragrafo di testo.&lt;/p&gt; <br>
+            &lt;h1&gt;Questo è un titolo di livello 1&lt;/h1&gt; <br>
+            &lt;h2&gt;Questo è un titolo di livello 2&lt;/h2&gt; <br>          
+        </code>
+    </p>
+    <h3>Testo in Grassetto e Corsivo:</h3>
+    <p>I tag <strong>strong</strong> e <strong>em</strong> sono utilizzati rispettivamente per evidenziare il testo in grassetto e in corsivo.</p>
+    <p>
+        <code class="code">
+            Questo è un testo &lt;strong&gt;in grassetto&lt;/strong&gt;. <br>
+            Questo è un testo &lt;em&gt;in corsivo&lt;/em&gt;. <br>            
+        </code>
+    </p>
+    <h3>Sottolineato e Barrato:</h3>
+    <p>I tag <strong>u</strong> e <strong>s</strong> permettono di sottolineare e barrare il testo.</p>
+    <p>
+        <code class="code">
+            Questo è un testo &lt;u&gt;sottolineato&lt;/u&gt;. <br>
+            Questo è un testo &lt;s&gt;barrato&lt;/s&gt;. <br>            
+        </code>
+    </p>
+    <h3>Citazioni e Citazioni in Blocco:</h3>
+    <p>I tag <strong>q</strong> e <strong>blockquote</strong> sono utilizzati per le citazioni, con <strong>blockquote</strong> che è utilizzato per citazioni in blocco.</p>
+    <p>
+        <code class="code">
+            &lt;q&gt;Questo è un testo citato.&lt;/q&gt; <br>
+            &lt;blockquote&gt;Questa è una citazione in blocco.&lt;/blockquote&gt; <br>            
+        </code>
+    </p>
+    <p>La formattazione dei testi e dei contenuti in HTML permette di strutturare e organizzare il contenuto della pagina web in modo chiaro e leggibile.</p>
+    <h2>Collegamenti e Navigazione</h2>
+    <p>I collegamenti ipertestuali sono elementi fondamentali nelle pagine web che consentono agli utenti di navigare tra diverse pagine o risorse online. In HTML, i collegamenti sono definiti utilizzando il tag <strong>a</strong>.</p>
+    <h3>Collegamenti a URL Esterni:</h3>
+    <p>Utilizzando il tag <strong>a</strong> insieme all'attributo <strong>href</strong>, è possibile creare collegamenti ipertestuali a pagine esterne.</p>
+    <p>
+        <code class="code">
+            &lt;a href="https://www.example.com"&gt;Visita il nostro sito web&lt;/a&gt; <br>
+        </code>
+    </p>
+    <h3>Collegamenti Interni:</h3>
+    <p>È possibile creare collegamenti ipertestuali all'interno della stessa pagina utilizzando gli identificatori.</p>
+    <p>
+        <code class="code">
+            &lt;a href="#sezione"&gt;Salta alla sezione&lt;/a&gt; <br>
+            ... <br>
+            &lt;h2 id="sezione"&gt;Questa è una sezione&lt;/h2&gt; <br>
+        </code>
+    </p>
+    <h3>Collegamenti a Email:</h3>
+    <p>È possibile creare collegamenti per inviare email utilizzando il prefisso <strong>mailto</strong>: nell'attributo <strong>href</strong>.</p>
+    <p>
+        <code class="code">
+            &lt;a href="mailto:info@example.com"&gt;Contattaci via email&lt;/a&gt; <br>
+        </code>
+    </p>
+    <h3>Collegamenti a File:</h3>
+    <p>È possibile creare collegamenti a file scaricabili, come documenti PDF o file multimediali.</p>
+    <p>
+        <code class="code">
+            &lt;a href="documento.pdf"&gt;Scarica il nostro documento PDF&lt;/a&gt; <br>
+        </code>
+    </p>
+    <p>I collegamenti ipertestuali sono essenziali per la navigazione web e consentono agli utenti di accedere a risorse esterne, navigare all'interno di una pagina web e interagire con il contenuto in modo efficace.</p>
+    <h2>Immagini e Multimedia</h2>
+    <p>Le immagini e il contenuto multimediale sono componenti importanti di una pagina web che arricchiscono l'esperienza dell'utente. In HTML, è possibile incorporare immagini, video e audio utilizzando i tag appropriati.</p>
+    <h3>Tag <strong>img</strong> per Immagini:</h3>
+    <p>Utilizzando il tag <strong>img</strong>, è possibile incorporare immagini nelle pagine web specificando l'URL dell'immagine e, facoltativamente, il testo alternativo.</p>
+    <p>
+        <code class="code">
+            &lt;img src="immagine.jpg" alt="Descrizione dell'immagine"&gt; <br>
+        </code>
+    </p>
+    <h3>Tag <strong>video</strong> per Video:</h3>
+    <p>Il tag <strong>video</strong> consente di incorporare video nelle pagine web specificando l'URL del video e, facoltativamente, controlli per la riproduzione.</p>
+    <p>
+        <code class="code">
+            &lt;video src="video.mp4" controls&gt;&lt;/video&gt; <br>
+        </code>
+    </p>
+    <h3>Tag <strong>audio</strong> per Audio:</h3>
+    <p>Il tag <strong>audio</strong> permette di incorporare file audio nelle pagine web specificando l'URL dell'audio e, facoltativamente, controlli per la riproduzione.</p>
+    <p>
+        <code class="code">
+            &lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt; <br>
+        </code>
+    </p>
+    <h3>Attributi degli Elementi Multimediali:</h3>
+    <p>Gli elementi multimediali supportano una serie di attributi aggiuntivi per controllare l'aspetto e il comportamento, come <strong>autoplay</strong>, <strong>loop</strong>, <strong>poster</strong>, <strong>preload</strong>, etc.</p>
+    <p>
+        <code class="code">
+            &lt;video src="video.mp4" autoplay loop poster="anteprima.jpg" preload="auto"&gt;&lt;/video&gt; <br>
+        </code>
+    </p>
+    <p>L'aggiunta di immagini e contenuti multimediali alle pagine web arricchisce il contenuto e rende l'esperienza dell'utente più coinvolgente.</p>
+    <h2>Tabelle e Liste</h2>
+    <p>Le tabelle e le liste sono utilizzate per organizzare e presentare dati in modo strutturato e ordinato nelle pagine web.</p>
+    <h3>Tabelle HTML:</h3>
+    <p>Le tabelle in HTML sono create utilizzando i tag <strong>table</table></strong>, <strong>tr</strong> per le righe e <strong>td</strong> per le celle.</p>
+    <p>
+        <code class="code">
+            &lt;table&gt; <br>
+            &lt;tr&gt;<br>
+                &lt;td&gt;Dato 1&lt;/td&gt;<br>
+                &lt;td&gt;Dato 2&lt;/td&gt;<br>
+            &lt;/tr&gt;<br>
+            &lt;tr&gt;<br>
+                &lt;td&gt;Dato 3&lt;/td&gt;<br>
+                &lt;td&gt;Dato 4&lt;/td&gt;<br>
+            &lt;/tr&gt;<br>
+        &lt;/table&gt;<br>
+        </code>
+    </p>
+    <h3>Liste Ordinate e Non Ordinate:</h3>
+    <p>Le liste ordinate <strong>ol</strong> e non ordinate <strong>ul</strong> sono utilizzate per elencare una serie di elementi con o senza un ordine specifico.</p>
+    <p>
+        <code class="code">
+            &lt;ul&gt; <br>
+            &lt;li&gt;Elemento 1&lt;/li&gt;<br>
+            &lt;li&gt;Elemento 2&lt;/li&gt;<br>
+        &lt;/ul&gt;<br>
+        
+        &lt;ol&gt;<br>
+            &lt;li&gt;Primo elemento&lt;/li&gt;<br>
+            &lt;li&gt;Secondo elemento&lt;/li&gt;<br>
+        &lt;/ol&gt;<br>
+        </code>
+    </p>
+    <h3>Liste con Descrizioni:</h3>
+    <p>Le liste con descrizioni <strong>dl</strong>, <strong>dd</strong>, <strong>dt</strong> sono utilizzate per elencare elementi con descrizioni associate.</p>
+    <p>
+        <code class="code">
+            &lt;dl&gt; <br>
+            &lt;dt&gt;Parola 1&lt;/dt&gt;<br>
+            &lt;dd&gt;Descrizione della parola 1&lt;/dd&gt;<br>
+            &lt;dt&gt;Parola 2&lt;/dt&gt;<br>
+            &lt;dd&gt;Descrizione della parola 2&lt;/dd&gt;<br>
+        &lt;/dl&gt;<br>
+        </code>
+    </p>
+    <p>Le tabelle e le liste sono strumenti utili per organizzare e presentare dati in modo chiaro e ordinato nelle pagine web.</p>
+    <h2>Form e Input Utente</h2>
+    <p>I form HTML consentono agli utenti di inserire dati interattivamente e inviarli al server per l'elaborazione. Gli input utente possono includere campi di testo, caselle di controllo, pulsanti di opzione e altro ancora.</p>
+    <h3>Tag <strong>form</strong>:</h3>
+    <p>Il tag <strong>form</strong> è utilizzato per creare un modulo che raccoglie input dall'utente.</p>
+    <p>
+        <code class="code">
+            &lt;form action="/submit" method="post"&gt; <br>
+            <!-- Contenuto del modulo --> <br>
+        &lt;/form&gt; <br>
+        </code>
+    </p>
+    <h3>Campi di Testo:</h3>
+    <p>I campi di testo <strong>input type="text"</strong> consentono agli utenti di inserire testo.</p>
+    <p>
+        <code class="code">
+            &lt;input type="text" name="username" placeholder="Nome Utente"&gt; <br>
+        </code>
+    </p>
+    <h3>Caselle di Controllo:</h3>
+    <p>Le caselle di controllo <strong>input type="checkbox"</strong> consentono agli utenti di selezionare una o più opzioni.</p>
+    <p>
+        <code class="code">
+            &lt;input type="checkbox" name="interessi" value="calcio"&gt; Calcio <br>
+            &lt;input type="checkbox" name="interessi" value="tennis"&gt; Tennis <br>            
+        </code>
+    </p>
+    <h3>Pulsanti di Opzione:</h3>
+    <p>I pulsanti di opzione <strong>input type="radio"</strong> consentono agli utenti di selezionare una sola opzione da un gruppo.</p>
+    <p>
+        <code class="code">
+            &lt;input type="radio" name="sesso" value="maschio"&gt; Maschio <br>
+            &lt;input type="radio" name="sesso" value="femmina"&gt; Femmina     <br>        
+        </code>
+    </p>
+    <h3>Menu a Discesa:</h3>
+    <p>I menu a discesa <strong>select</strong>, <strong>option</strong> consentono agli utenti di selezionare una sola opzione da un elenco.</p>
+    <p>
+        <code class="code">
+            &lt;select name="lingua"&gt; <br>
+            &lt;option value="italiano"&gt;Italiano&lt;/option&gt; <br>
+            &lt;option value="inglese"&gt;Inglese&lt;/option&gt; <br>
+        &lt;/select&gt; <br>        
+        </code>
+    </p>
+    <h3>Pulsanti di Invio:</h3>
+    <p>I pulsanti di invio <strong>input type="submit"</strong> inviano il modulo al server per l'elaborazione.</p>
+    <p>
+        <code class="code">
+            &lt;input type="submit" value="Invia"&gt; <br>
+        </code>
+    </p>
+    <p>L'uso dei form HTML consente agli sviluppatori di creare interfacce utente interattive e raccogliere dati dagli utenti in modo efficiente.</p>
+    <h2>Layout e struttura della pagina</h2>
+    <p>Il layout e la struttura della pagina HTML organizzano il contenuto in modo chiaro e logico, migliorando l'usabilità e l'estetica.</p>
+    <h3>Elementi di Struttura Principali:</h3>
+    <p>Gli elementi semantici aiutano a definire la struttura della pagina.</p>
+    <p>
+        <code class="code">
+            &lt;header&gt;Intestazione della pagina&lt;/header&gt; <br>
+            &lt;nav&gt;Menu di navigazione&lt;/nav&gt; <br>
+            &lt;main&gt;Contenuto principale&lt;/main&gt; <br>
+            &lt;footer&gt;Piè di pagina&lt;/footer&gt; <br>            
+        </code>
+    </p>
+    <h3>Sezioni e Articoli:</h3>
+    <p>Gli elementi <strong>section</strong> e <strong>article</strong> organizzano contenuti correlati.</p>
+    <p>
+        <code class="code">
+            &lt;section&gt;<br>
+            &lt;h2&gt;Sezione 1&lt;/h2&gt;<br>
+            &lt;p&gt;Contenuto della sezione 1.&lt;/p&gt;<br>
+        &lt;/section&gt;<br>
+        
+        &lt;article&gt;<br>
+            &lt;h2&gt;Articolo 1&lt;/h2&gt;<br>
+            &lt;p&gt;Contenuto dell'articolo 1.&lt;/p&gt;<br>
+        &lt;/article&gt; <br>        
+        </code>
+    </p>
+    <h3>Div e Span:</h3>
+    <p>Gli elementi <strong>div</strong> e <strong>span</strong> sono usati per raggruppare e stilizzare blocchi di contenuto.</p>
+    <p>
+        <code class="code">
+            &lt;div&gt; <br>
+            &lt;p&gt;Questo è un blocco di contenuto.&lt;/p&gt; <br>
+        &lt;/div&gt; <br>
+        
+        &lt;span&gt;Questo è un testo in linea.&lt;/span&gt; <br>        
+        </code>
+    </p>
+    <h3>Layout con CSS:</h3>
+    <p>CSS è usato per definire il layout e la posizione degli elementi.</p>
+    <p>
+        <code class="code">
+            &lt;style&gt;
+            header, nav, main, footer {<br>
+                padding: 20px;<br>
+            }<br>
+            main {<br>
+                display: flex;<br>
+            }<br>
+        &lt;/style&gt; <br>    
+        </code>
+    </p>
+    <h3>Contenitori di Layout:</h3>
+    <p>Gli elementi <strong>header</strong>, <strong>footer</strong>, <strong>nav</strong>, <strong>aside</strong>, <strong>section</strong>, <strong>article</strong>, <strong>div</strong> strutturano e stilizzano il contenuto.</p>
+    <p>
+        <code class="code">
+            &lt;aside&gt;Barra laterale con informazioni aggiuntive&lt;/aside&gt; <br>
+        </code>
+    </p>
+    <p>Il layout e la struttura della pagina HTML creano un'esperienza utente organizzata e piacevole.</p>
+    <h2>Semantica e Accessibilità</h2>
+    <p>La semantica HTML e l'accessibilità sono fondamentali per creare pagine web comprensibili e fruibili da tutti gli utenti, inclusi quelli con disabilità.</p>
+    <h3>Tag Semantici:</h3>
+    <p>Utilizzare tag semantici per definire chiaramente la struttura e il contenuto.</p>
+    <p>
+        <code class="code">
+            &lt;header&gt;Intestazione&lt;/header&gt;<br>
+            &lt;nav&gt;Navigazione&lt;/nav&gt;<br>
+            &lt;main&gt;Contenuto principale&lt;/main&gt;<br>
+            &lt;footer&gt;Piè di pagina&lt;/footer&gt;<br>
+            &lt;article&gt;Articolo&lt;/article&gt;<br>
+            &lt;section&gt;Sezione&lt;/section&gt; <br>            
+        </code>
+    </p>
+    <h3>Elementi di Testo Semantici:</h3>
+    <p>Tag semantici per migliorare la comprensione del contenuto.</p>
+    <p>
+        <code class="code">
+            &lt;h1&gt;Titolo principale&lt;/h1&gt; <br>
+            &lt;h2&gt;Sottotitolo&lt;/h2&gt; <br>
+            &lt;aside&gt;Contenuto secondario&lt;/aside&gt; <br>
+            &lt;time datetime="2024-05-20"&gt;20 Maggio 2024&lt;/time&gt; <br>            
+        </code>
+    </p>
+    <h3>Attributi ARIA (Accessible Rich Internet Applications):</h3>
+    <p>Utilizzare gli attributi ARIA per migliorare l'accessibilità.</p>
+    <p>
+        <code class="code">
+            &lt;button aria-label="Chiudi"&gt;X&lt;/button&gt; <br>
+            &lt;nav aria-label="Menu principale"&gt; <br>
+                &lt;ul&gt; <br>
+                    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt; <br>
+                    &lt;li&gt;&lt;a href="#about"&gt;Chi siamo&lt;/a&gt;&lt;/li&gt; <br>
+                &lt;/ul&gt; <br>
+            &lt;/nav&gt; <br>            
+        </code>
+    </p>
+    <h3>Testo Alternativo per Immagini:</h3>
+    <p>Fornire descrizioni testuali per le immagini.</p>
+    <p>
+        <code>
+            &lt;img src="immagine.jpg" alt="Descrizione dell'immagine"&gt; <br>
+        </code>
+    </p>
+    <h3>Form Accessibili:</h3>
+    <p>Etichettare chiaramente i campi dei moduli.</p>
+    <p>
+        <code class="code">
+            &lt;label for="nome"&gt;Nome:&lt;/label&gt; <br>
+            &lt;input type="text" id="nome" name="nome"&gt; <br>            
+        </code>
+    </p>
+    <p>L'uso di tag semantici e pratiche di accessibilità garantisce che le pagine web siano utilizzabili e comprensibili per tutti gli utenti, migliorando l'esperienza utente e l'inclusività.</p>
+</div>
+</body>
+</html>
