@@ -1,6 +1,0 @@
- - Nelle parti di codice, provsre il font "Fira Code" (Fira Code non è disponibile su Google Fonts, ma puoi scaricarlo da GitHub e includerlo localmente o tramite un link diretto ad un CDN come jsDelivr:
-
-- Usare gli esercizi ssvolti negli anni come esempi
-
-
-*******COLLEGARE TENDINA A ARGOMENTI E MIGLIORARE VISIBILITA********
