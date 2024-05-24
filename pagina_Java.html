@@ -13,45 +13,8 @@
         <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
         <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
     </div>
-    <div class="auth-buttons">
-        <div class="dropdown">
-            <button class="btn btn-login">Accedi</button>
-            <div class="dropdown-content" id="login-form">
-                <div class="form-container">
-                    <div class="login-form">
-                        <h2>Login</h2>
-                        <form action="submit_login.php" method="POST">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required>
-                            <button type="submit">Accedi</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="btn btn-register">Registrati</button>
-            <div class="dropdown-content" id="register-form">
-                <div class="form-container">
-                    <div class="register-form">
-                        <h2>Registrati</h2>
-                        <form action="submit_register.php" method="POST">
-                            <label for="register-email">Email:</label>
-                            <input type="email" id="register-email" name="email" required>
-                            <label for="register-password">Password:</label>
-                            <input type="password" id="register-password" name="password" required>
-                            <button type="submit">Registrati</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="btn btn-logged-in" style="display:none;">Hai effettuato l'accesso</button>
     </div>
 </header>
-<div id="message"></div>
 
 <div class="legend-container">
     <div class="legend-toggle">Argomenti del tutorial</div>
@@ -68,6 +31,7 @@
             <li><a href="#arraylist-java">Arraylist</a></li>
             <li><a href="#try-catch-block-java">Try-Catch block</a></li>
             <li><a href="#input-output-java">Input/Output</a></li>
+            <li><a href="#esercizio-java">Esercizio</a></li>
         </ul>
     </div>
 </div>
@@ -520,6 +484,60 @@
         </code>
     </p>
     <p>Java fornisce una varietà di classi e metodi per gestire l'I/O, consentendo di leggere e scrivere dati da diverse fonti e destinazioni in modo efficiente.</p>
+    <h4 id="esercizio-java">Esercizio</h4>
+    <p>Ecco un esercizio svolto in classe</p>
+    <h3>Consegna:</h3>
+    <p>Leggi N numeri reali e stampa la somma di tutti i numeri, il minimo e il massimo</p>
+    <h3>Soluzione:</h3>
+    <p>
+        <code class="code">
+            import java.util.Scanner; <br>
+
+            public class Main { <br>
+                public static void main(String[] args) {<br>
+                    Scanner scanner = new Scanner(System.in);<br>
+            
+                    System.out.print("Inserisci il numero di numeri da leggere: ");<br>
+                    int N = scanner.nextInt();<br>
+            
+                    double sum = 0;<br>
+                    double min = Double.MAX_VALUE;<br>
+                    double max = Double.MIN_VALUE;<br>
+            
+                    System.out.println("Inserisci " + N + " numeri reali:");<br>
+            
+                    for (int i = 0; i < N; i++) {<br>
+                        double num = scanner.nextDouble();<br>
+                        sum += num;<br>
+                        if (num < min) {<br>
+                            min = num;<br>
+                        }<br>
+                        if (num > max) {<br>
+                            max = num;<br>
+                        }<br>
+                    }<br>
+            
+                    System.out.println("Somma: " + sum);<br>
+                    System.out.println("Minimo: " + min);<br>
+                    System.out.println("Massimo: " + max);<br>
+            
+                    scanner.close();<br>
+                }<br>
+            }<br>
+                        
+        </code>
+    </p>
+    <h3>Spiegazione:</h3>
+    <ul>
+        <li><strong>Import delle librerie:</strong> Il codice importa la classe <strong>Scanner</strong> dal pacchetto <strong>java.util</strong>, che è utilizzata per leggere l'input dell'utente dalla console.</li>
+        <li><strong>Definizione della classe Main:</strong> La classe <strong>Main</strong> contiene il metodo <strong>main</strong>, che è il punto di ingresso del programma Java.</li>
+        <li><strong>Inizializzazione delle variabili:</strong> Viene dichiarato un oggetto <strong>Scanner</strong> per la lettura dell'input dall'utente. Vengono anche inizializzate le variabili <strong>sum</strong>, <strong>min</strong> e <strong>max</strong> per contenere rispettivamente la somma, il minimo e il massimo dei numeri inseriti.</li>
+        <li><strong>Lettura di N:</strong> L'utente inserisce il numero di numeri reali <strong>(N)</strong> che desidera inserire.</li>
+        <li><strong>Lettura dei numeri reali:</strong> Viene visualizzato un messaggio di prompt per l'utente, chiedendo di inserire <strong>N</strong> numeri reali. Utilizzando un ciclo <strong>for</strong>, il programma legge ogni numero inserito dall'utente e lo aggiunge alla somma. Inoltre, il programma aggiorna le variabili <strong>min</strong> e <strong>max</strong> se il numero appena inserito è rispettivamente minore o maggiore del valore attuale di <strong>min</strong> o <strong>max</strong>.</li>
+        <li><strong>Stampa dei risultati:</strong> Una volta letti tutti i numeri reali, il programma stampa la somma, il minimo e il massimo utilizzando i valori calcolati.</li>
+        <li><strong>Chiusura dello scanner:</strong> Infine, il programma chiude lo scanner per liberare le risorse.</li>
+    </ul>
+    
 </div>
 <script src="script.js"></script>
 </body>
