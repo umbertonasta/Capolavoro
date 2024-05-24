@@ -1,4 +1,4 @@
-/* Reset CSS */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,16 +6,14 @@
     font-size: calc(1em + 0.5px);
 }
 
-/* Variabili globali */
 :root {
-    --colore-principale: #007bff; /* Blu */
-    --colore-testo: #333; /* Nero */
-    --colore-sfondo: #f2f2f2; /* Grigio chiaro */
-    --colore-accento: #28a745; /* Verde */
-    --colore-python: #ffce54; /* Giallo */
+    --colore-principale: #007bff; 
+    --colore-testo: #333;
+    --colore-sfondo: #f2f2f2; 
+    --colore-accento: #28a745; 
+    --colore-python: #ffce54; 
 }
 
-/* Stili per il body */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--colore-sfondo);
@@ -23,7 +21,13 @@ body {
     line-height: 1.6;
 }
 
-/* Stili per l'header */
+h4 {
+    background-color: #2890ff;
+    font-size: 2rem;
+    border-radius: 10px;
+    display: inline-block;
+}
+
 .navbar {
     display: flex;
     position: relative;
@@ -35,10 +39,10 @@ body {
 }
 
 .titolo {
-    font-size: 3rem; /* Aumenta la dimensione del titolo */
+    font-size: 3rem; 
     margin-bottom: 10px;
-    color: #fff; /* Testo bianco per contrasto con lo sfondo */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Effetto ombra più evidente */
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
     opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
@@ -48,46 +52,44 @@ body {
 }
 
 .sottotitolo {
-    font-size: 1.5rem; /* Aumenta la dimensione del sottotitolo */
-    color: #fff; /* Testo bianco per contrasto con lo sfondo */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Effetto ombra più evidente */
+    font-size: 1.5rem; 
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
     opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
 
 .linguaggi-container {
-    overflow: hidden; /* Nasconde il contenuto che va oltre i limiti dell'elemento genitore */
+    overflow: hidden; 
 }
 
-/* Stili per i box dei linguaggi */
 .linguaggio-box {
     text-align: center;
-    background-color: #fff; /* Aggiungi il colore di sfondo bianco */
-    border-radius: 10px; /* Arrotonda gli angoli del box */
-    overflow: hidden; /* Nasconde i bordi arrotondati che vanno oltre i limiti del box */
-    padding: 10px; /* Aggiungi del padding interno per far spazio al contenuto */
-    margin: 10px; /* Aggiungi del margine esterno per separare i box */
-    transition: transform 0.3s ease; /* Aggiungi una transizione per un effetto di sollevamento graduale */
-    transform: translateY(0); /* Aggiungi uno stato iniziale */
+    background-color: #fff; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    padding: 10px; 
+    margin: 10px; 
+    transition: transform 0.3s ease; 
+    transform: translateY(0); 
 }
 
 .linguaggio-box h2 {
-    font-size: 2.2rem; /* Aumenta la dimensione del testo del titolo */
+    font-size: 3.5rem; 
     margin-bottom: 10px;
-    color: var(--colore-principale); /* Colore principale */
+    color: var(--colore-principale); 
 }
 
 .linguaggio-box:hover {
-    transform: translateY(-5px) scale(1.02); /* Solleva leggermente il box e ingrandiscilo leggermente */
+    transform: translateY(-5px) scale(1.02); 
 }
 
 .descrizione {
-    font-size: 1.1rem; /* Aumenta la dimensione del testo della descrizione */
+    font-size: 1.1rem; 
     margin-bottom: 20px;
-    color: var(--colore-testo); /* Colore testo */
+    color: var(--colore-testo); 
 }
 
-/* Stili per i pulsanti */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -118,8 +120,8 @@ html {
 }
 
 .home-link {
-    color: #fff; /* Imposta il colore del testo a bianco */
-    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #fff; 
+    text-decoration: none; 
 }
 
 .legend-container {
@@ -128,23 +130,29 @@ html {
     left: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd; 
-    border-radius: 10px; /* Bordi smussati */
+    border-radius: 10px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Padding ridotto per adattarsi meglio al testo */
+    padding: 10px; 
 }
 
 .legend-toggle {
     cursor: pointer;
     font-weight: bold;
-    color: #007bff; /* Cambia colore del testo del toggle */
+    color: #007bff; 
 }
 
 .legend-content {
     margin-top: 10px;
 }
 
+.legend-content a {
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
+} 
+
 .legend-content ul {
-    list-style-type: none; /* Rimuove i punti dalla lista */
+    list-style-type: none; 
     padding: 0;
 }
 
@@ -154,11 +162,11 @@ html {
 
 .tutorial-container {
     position: absolute;
-    top: 200px; /* 100px per l'altezza della navbar e 20px di margine */
-    left: 300px; /* 20px di margine, 200px per la larghezza della legenda e 20px di margine */
+    top: 200px; 
+    left: 300px; 
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px; /* Bordi smussati */
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
@@ -173,17 +181,16 @@ code {
 }
 
 .brand {
-    margin: 0 auto; /* Centra il brand (titolo e sottotitolo) orizzontalmente */
+    margin: 0 auto; 
 }
 
-/* Stili per il contenitore del tutorial */
 .tutorial-container {
     position: absolute;
-    top: 200px; /* 100px per l'altezza della navbar e 20px di margine */
-    left: 300px; /* 20px di margine, 200px per la larghezza della legenda e 20px di margine */
+    top: 200px; 
+    left: 300px; 
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px; /* Bordi smussati */
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
@@ -197,3 +204,96 @@ code {
     padding-left: 30px;
 }
 
+.form-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    width: 250px;
+}
+
+.auth-buttons {
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.dropdown .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--colore-principale);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.dropdown .btn:hover {
+    background-color: var(--colore-accento);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown-content .form-container {
+    margin-bottom: 10px;
+}
+
+.login-form,
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label,
+.register-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input,
+.register-form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 90%; 
+    box-sizing: border-box; 
+}
+
+.login-form button,
+.register-form button {
+    padding: 10px;
+    background-color: var(--colore-principale);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+}
+
+.login-form button:hover,
+.register-form button:hover {
+    background-color: var(--colore-accento);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

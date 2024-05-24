@@ -13,26 +13,64 @@
         <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
         <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
     </div>
+    <div class="auth-buttons">
+        <div class="dropdown">
+            <button class="btn btn-login">Accedi</button>
+            <div class="dropdown-content" id="login-form">
+                <div class="form-container">
+                    <div class="login-form">
+                        <h2>Login</h2>
+                        <form action="submit_login.php" method="POST">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Accedi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-register">Registrati</button>
+            <div class="dropdown-content" id="register-form">
+                <div class="form-container">
+                    <div class="register-form">
+                        <h2>Registrati</h2>
+                        <form action="submit_register.php" method="POST">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" name="email" required>
+                            <label for="register-password">Password:</label>
+                            <input type="password" id="register-password" name="password" required>
+                            <button type="submit">Registrati</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-logged-in" style="display:none;">Hai effettuato l'accesso</button>
+    </div>
 </header>
+<div id="message"></div>
 
 <div class="legend-container">
     <div class="legend-toggle">Argomenti del tutorial</div>
     <div class="legend-content">
         <ul>
-            <li>Introduzione</li>
-            <li>Sintassi</li>
-            <li>Selettori</li>
-            <li>Proprietà di Stile di Base</li>
-            <li>Modello di Box</li>
-            <li>Layout e Posizionamento</li>
-            <li>Colori e Sfondi</li>
-            <li>Transizioni e Animazioni</li>
+            <li><a href="#introduzione-css">Introduzione</a></li>
+            <li><a href="#sintassi-css">Sintassi</a></li>
+            <li><a href="#proprieta-e-valori-css">Proprietà e Valori:</a></li>
+            <li><a href="#proprietà-di-stile-di-base-css">Proprietà di Stile di Base</a></li>
+            <li><a href="#modello-di-box-css">Modello di Box</a></li>
+            <li><a href="#layout-e-posizionamento-css">Layout e Posizionamento</a></li>
+            <li><a href="#colori-e-sfondi-css">Colori e Sfondi</a></li>
+            <li><a href="#transizioni-e-animazioni-css">Transizioni e Animazioni</a></li>
         </ul>
     </div>
 </div>
 
 <div class="tutorial-container">
-    <h2>Introduzione</h2>
+    <h4 id="introduzione-css">Introduzione</h4>
     <p>CSS (Cascading Style Sheets) è il linguaggio utilizzato per descrivere l'aspetto e la formattazione di un documento scritto in HTML. CSS consente di separare la presentazione del contenuto dalla struttura, facilitando la manutenzione e il design delle pagine web.</p>
     <h3>Cosa è CSS:</h3>
     <p>CSS è un linguaggio di stile usato per controllare l'aspetto di documenti HTML. Permette di applicare stili a elementi HTML, come colori, font, spaziatura e layout.</p>
@@ -67,7 +105,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Sintassi</h2>
+    <h4 id="sintassi-css">Sintassi</h4>
     <p>La sintassi di CSS è semplice e strutturata in modo da applicare stili agli elementi HTML.</p>
     <h3>Regole CSS:</h3>
     <p>Le regole CSS sono composte da selettori e dichiarazioni.</p>
@@ -90,7 +128,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Proprietà e Valori:</h2>
+    <h4 id="proprieta-e-valori-css">Sintassi</h4>
     <p>Le proprietà definiscono quale aspetto modificare e i valori specificano il cambiamento.</p>
     <p>
         <code class="code">
@@ -116,7 +154,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Selettori</h2>
+    <h4 id="selettori-css">Selettori</h4>
     <p>I selettori CSS sono utilizzati per scegliere gli elementi HTML a cui applicare gli stili. Esistono vari tipi di selettori che consentono un controllo preciso sugli elementi.</p>
     <h3>Selettori di Tipo:</h3>
     <p>Selezionano tutti gli elementi di un certo tipo.</p>
@@ -185,7 +223,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Proprietà di Stili di base</h2>
+    <h4 id="proprietà-di-stile-di-base-css">Proprietà di Stile di Base</h4>
     <p>Le proprietà di stile di base in CSS permettono di controllare l'aspetto degli elementi HTML.</p>
     <h3>Color:</h3>
     <p>Imposta il colore del testo.</p>
@@ -255,7 +293,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Modello di Box</h2>
+    <h4 id="modello-di-box-css">Modello di Box</h4>
     <p>Il modello di box CSS definisce come sono calcolate le dimensioni e lo spazio intorno agli elementi HTML. Ogni elemento è rappresentato come un rettangolo composto da quattro parti: contenuto, padding, bordo e margine.</p>
     <h3>Contenuto (Content):</h3>
     <p>L'area dove il testo e le immagini sono visualizzati.</p>
@@ -308,7 +346,7 @@
         </code>
     </p>
     <p>Il modello di box è essenziale per comprendere come gli elementi sono dimensionati e spazialmente organizzati nella pagina web.</p>
-    <h2>Layout e Posizionamento</h2>
+    <h4 id="layout-e-posizionamento-css">Layout e Posizionamento</h4>
     <p>Il layout e il posizionamento in CSS consentono di controllare la disposizione degli elementi sulla pagina web.</p>
     <h3>Display:</h3>
     <p>La proprietà <strong>display</strong> definisce il tipo di scatola generata da un elemento.</p>
@@ -369,7 +407,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Colori e Sfondi</h2>
+    <h4 id="colori-e-sfondi-css">Colori e Sfondi</h4>
     <p>Le proprietà CSS per i colori e gli sfondi permettono di personalizzare l'aspetto degli elementi HTML.</p>
     <h3>Color:</h3>
     <p>Imposta il colore del testo.</p>
@@ -436,7 +474,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Transizioni e Animazioni</h2>
+    <h4 id="transizioni-e-animazioni-css">Transizioni e Animazioni</h4>
     <p>Le transizioni e le animazioni in CSS aggiungono dinamicità e interattività agli elementi HTML, consentendo loro di cambiare aspetto nel tempo.</p>
     <h3>Transizioni:</h3>
     <p>Le transizioni permettono di cambiare gradualmente un elemento da uno stato all'altro.</p>
@@ -506,6 +544,6 @@
     <p>Direzione dell'animazione (normale, alternata, ecc.).</p>
     <p>Le transizioni e le animazioni CSS aggiungono un elemento di dinamicità e interesse visivo alle pagine web, migliorando l'esperienza utente.</p>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

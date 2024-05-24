@@ -13,27 +13,65 @@
         <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
         <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
     </div>
+    <div class="auth-buttons">
+        <div class="dropdown">
+            <button class="btn btn-login">Accedi</button>
+            <div class="dropdown-content" id="login-form">
+                <div class="form-container">
+                    <div class="login-form">
+                        <h2>Login</h2>
+                        <form action="submit_login.php" method="POST">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Accedi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-register">Registrati</button>
+            <div class="dropdown-content" id="register-form">
+                <div class="form-container">
+                    <div class="register-form">
+                        <h2>Registrati</h2>
+                        <form action="submit_register.php" method="POST">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" name="email" required>
+                            <label for="register-password">Password:</label>
+                            <input type="password" id="register-password" name="password" required>
+                            <button type="submit">Registrati</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-logged-in" style="display:none;">Hai effettuato l'accesso</button>
+    </div>
 </header>
+<div id="message"></div>
 
 <div class="legend-container">
     <div class="legend-toggle">Argomenti del tutorial</div>
     <div class="legend-content">
         <ul>
-            <li>Introduzione al linguaggio C</li>
-            <li>Struttura di base del programma C</li>
-            <li>Variabili e tipi di dati</li>
-            <li>Input e output</li>
-            <li>Operatori e espressioni</li>
-            <li>Strutture di controllo</li>
-            <li>Funzioni</li>
-            <li>Array e stringhe</li>
-            <li>File I/O</li>
+            <li><a href="#introduzione-linguaggio-c">Introduzione al linguaggio C</a></li>
+            <li><a href="#struttura-di-base-c">Struttura di base</a></li>
+            <li><a href="#variabili-e-tipi-di-dati-c">Variabili e tipi di dati</a></li>
+            <li><a href="#input-e-output-c">Input e output</a></li>
+            <li><a href="#operatori-e-espressioni-c">Operatori e espressioni</a></li>
+            <li><a href="#strutture-di-controllo-c">Strutture di controllo</a></li>
+            <li><a href="#funzioni-c">Funzioni</a></li>
+            <li><a href="#array-e-stringhe-c">Array e stringhe</a></li>
+            <li><a href="#file-io-c">File I/O</a></li>
         </ul>
     </div>
 </div>
 
 <div class="tutorial-container">
-    <h2>Introduzione al linguaggio C</h2>
+    <h4 id="introduzione-linguaggio-c">Introduzione al linguaggio C</h4>
     <p>Benvenuto alla sezione "Introduzione a C" del nostro tutorial! In questa parte, esploreremo i concetti di base del linguaggio di programmazione C.</p>
     <h3>Cosa è il linguaggio C?</h3>
     <p>Il linguaggio C è un linguaggio di programmazione ad alto livello ampiamente utilizzato e diffuso. Creato da Dennis Ritchie negli anni '70 presso i Bell Labs, il linguaggio C è apprezzato per la sua efficienza, la sua portabilità e la sua capacità di fornire un controllo a basso livello sul sistema. È uno dei linguaggi più utilizzati per lo sviluppo di sistemi operativi, applicazioni di sistema e software embedded.</p>
@@ -60,7 +98,7 @@
     <hr>
     <p>&nbsp;</p>
     
-    <h2>Struttura di base del programma C</h2>
+    <h4 id="struttura-di-base-c">Struttura di base</h4>
     <p>La struttura di base di un programma in linguaggio C è composta da diversi elementi essenziali che definiscono il flusso e il comportamento del programma. Ecco una panoramica di questi elementi:</p>
     <p> 
         <ul>
@@ -89,7 +127,7 @@
     <hr>
     <p>&nbsp;</p>
 
-    <h2>Variabili e tipi di dati</h2>
+    <h4 id="variabili-e-tipi-di-dati-css">Variabili e tipi di dati</h4>
     <p>Nel linguaggio C, le variabili sono elementi fondamentali utilizzati per memorizzare e manipolare dati all'interno di un programma. Ogni variabile ha un tipo di dato associato, che determina il tipo di valore che può contenere e le operazioni che possono essere eseguite su di esso.</p>
     <p>Ci sono diversi tipi di dati di base nel linguaggio C, ciascuno dei quali è utilizzato per memorizzare un tipo specifico di valore:</p>
     <p> 
@@ -123,7 +161,7 @@
     <hr>
     <p>&nbsp;</p>
 
-    <h2>Input e output</h2>
+    <h4 id="input-e-output-c">Input e output</h4>
     <p>In linguaggio C, l'input e l'output sono gestiti principalmente utilizzando le funzioni della libreria standard <strong>stdio.h</strong>. Ecco come puoi leggere input dall'utente e stampare output sulla console:</p>
     <h3>Lettura di input dall'utente:</h3>
     <p>Per leggere input dall'utente, puoi utilizzare la funzione scanf(), che consente di acquisire input da tastiera in base al formato specificato.</p>
@@ -160,7 +198,7 @@
     <hr>
     <p>&nbsp;</p>
 
-    <h2>Operatori e espressioni</h2>
+    <h4 id="operatori-e-espressioni-c">Operatori e espressioni</h4>
     <p>Gli operatori in C sono simboli speciali utilizzati per eseguire operazioni su variabili e valori. Le espressioni sono combinazioni di operatori e operandi che producono un valore.</p>
     <h3>Operatori Aritmetici:</h3>
     <p>Gli operatori aritmetici eseguono operazioni matematiche su operandi.</p>
@@ -213,7 +251,7 @@
     <hr>
     <p>&nbsp;</p>
 
-    <h2>Strutture di controllo</h2>
+    <h4 id="strutture-di-controllo-c">Strutture di controllo</h4>
     <p>Le strutture di controllo in C sono utilizzate per gestire il flusso di esecuzione del programma. Le principali strutture di controllo includono if-else, while, for e switch.</p>
     <h3>if-else:</h3>
     <p>La struttura if-else permette di eseguire un blocco di istruzioni se una condizione è vera e un altro blocco se è falsa.</p>
@@ -298,7 +336,7 @@
     <hr>
     <p>&nbsp;</p>
 
-    <h2>Funzioni</h2>
+    <h4 id="funzioni-c">Funzioni</h4>
     <p>Le funzioni sono blocchi di codice che eseguono una specifica operazione. In C, le funzioni sono fondamentali per organizzare e strutturare il codice in unità più piccole e riutilizzabili. Una funzione può accettare input, elaborare i dati e restituire un risultato. Ecco un'esempio di dichiarazione e definizione di una funzione in C:</p>
     <p>
         <code class="code">
@@ -331,7 +369,7 @@
     <hr>
     <p>&nbsp;</p>
 
-    <h2>Array e stringhe</h2>
+    <h4 id="array-e-stringhe-c">Array e stringhe</h4>
     <p>Gli array sono una collezione di elementi dello stesso tipo dati, accessibili mediante un indice numerico. Le stringhe in C sono semplicemente array di caratteri terminati da un carattere nullo '\0'.</p>
     <h3>Definizione e Inizializzazione di Array:</h3>
     <p>
@@ -391,7 +429,7 @@
     <hr>
     <p>&nbsp;</p>
 
-    <h2>File I/O</h2>
+    <h4 id="file-io-c">File I/O</h4>
     <p>In C, è possibile leggere da file e scrivere su file utilizzando le funzioni standard di input/output. Questo è utile per leggere dati da file di testo, elaborarli e scrivere i risultati su file.</p>
     <h3>Lettura da un File:</h3>
     <p>Per leggere da un file in C, è necessario seguire i seguenti passaggi:</p>
@@ -403,7 +441,6 @@
         </ul>
     </p>
 </div>
-
+<script src="script.js"></script>
 </body>
-
 </html>

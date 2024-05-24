@@ -13,31 +13,69 @@
         <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
         <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
     </div>
+    <div class="auth-buttons">
+        <div class="dropdown">
+            <button class="btn btn-login">Accedi</button>
+            <div class="dropdown-content" id="login-form">
+                <div class="form-container">
+                    <div class="login-form">
+                        <h2>Login</h2>
+                        <form action="submit_login.php" method="POST">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Accedi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-register">Registrati</button>
+            <div class="dropdown-content" id="register-form">
+                <div class="form-container">
+                    <div class="register-form">
+                        <h2>Registrati</h2>
+                        <form action="submit_register.php" method="POST">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" name="email" required>
+                            <label for="register-password">Password:</label>
+                            <input type="password" id="register-password" name="password" required>
+                            <button type="submit">Registrati</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-logged-in" style="display:none;">Hai effettuato l'accesso</button>
+    </div>
 </header>
+<div id="message"></div>
 
 <div class="legend-container">
     <div class="legend-toggle">Argomenti del tutorial</div>
     <div class="legend-content">
         <ul>
-            <li>Breve storia, contesto e vantaggi</li>
-            <li>Variabili e tipi di dati</li>
-            <li>Operatori</li>
-            <li>Strutture di controllo</li>
-            <li>Cicli</li>
-            <li>Classi e oggetti</li>
-            <li>Ereditarietà</li>
-            <li>Array</li>
-            <li>Arraylist</li>
-            <li>Try-Catch block</li>
-            <li>Input/Output</li>
+            <li><a href="#introduzione-a-java">Introduzione a Java</a></li>
+            <li><a href="#contesto-vantaggi-java">Contesto e vantaggi</a></li>
+            <li><a href="#variabili-e-tipi-di-dati">Variabili e tipi di dati</a></li>
+            <li><a href="#operatori-java">Operatori</a></li>
+            <li><a href="#strutture-di-controllo-java">Strutture di controllo</a></li>
+            <li><a href="#classi-e-oggetti-java">Classi e oggetti</a></li>
+            <li><a href="#ereditarieta-java">Ereditarietà</a></li>
+            <li><a href="#array-java">Array</a></li>
+            <li><a href="#arraylist-java">Arraylist</a></li>
+            <li><a href="#try-catch-block-java">Try-Catch block</a></li>
+            <li><a href="#input-output-java">Input/Output</a></li>
         </ul>
     </div>
 </div>
 
 <div class="tutorial-container">
-    <h2>Introduzione al linguaggio Java</h2>
+    <h4 id="introduzione-a-java">Introduzione a Java</h4>
     <p>Benvenuto alla sezione "Introduzione a java" del nostro tutorial! In questa parte, esploreremo i concetti di base del linguaggio di programmazione Java.</p>
-    <h2>Breve storia, contesto e vantaggi</h2>
+    <h4 id="contesto-vantaggi-java">Contesto e vantaggi</h4>
     <p>Java è stato sviluppato da Sun Microsystems negli anni '90 come linguaggio versatile e portabile. La sua natura multipiattaforma lo ha reso popolare per lo sviluppo di applicazioni su diverse architetture e sistemi operativi.</p>
     <h3>Vantaggi:</h3>
     <p> 
@@ -51,7 +89,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Variabili e tipi di dati</h2>
+    <h4 id="variabili-e-tipi-di-dati">Variabili e tipi di dati</h4>
     <p>In Java, le variabili rappresentano dati modificabili. Puoi dichiararle specificando il tipo e il nome:</p>
     <p>
         <code class="code">
@@ -88,7 +126,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Operatori</h2>
+    <h4 id="operatori-java">Operatori</h4>
     <p>Gli operatori in Java sono simboli speciali utilizzati per eseguire operazioni su operandi come variabili e costanti. Ecco alcuni degli operatori più comuni in Java:</p>
     <h3>Operatori Aritmetici:</h3>
     <p>
@@ -137,7 +175,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Strutture di controllo</h2>
+    <h4 id="strutture-di-controllo-java">Strutture di controllo</h4>
     <p>Le strutture di controllo in Java sono utilizzate per gestire il flusso di esecuzione del programma. Le principali strutture di controllo includono:</p>
     <h3>Istruzione if-else:</h3>
     <p>Utilizzata per eseguire un blocco di codice se una condizione è vera e un altro blocco se la condizione è falsa.</p>
@@ -203,7 +241,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Classi e oggetti</h2>
+    <h4 id="classi-e-oggetti-java">Classi e oggetti</h4>
     <p>Le classi e gli oggetti sono concetti fondamentali della programmazione orientata agli oggetti (OOP) in Java.</p>
     <h3>Classe:</h3>
     <p>Una classe è un modello che definisce le caratteristiche e i comportamenti di un oggetto. Contiene attributi (variabili di istanza) e metodi (funzioni).</p>
@@ -251,7 +289,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Ereditarietà</h2>
+    <h4 id="ereditarieta-java">Ereditarietà</h4>
     <p>L'ereditarietà è un concetto chiave della programmazione orientata agli oggetti in Java, che consente la creazione di nuove classi basate su classi esistenti.</p>
     <h3>Superclasse e Sottoclasse:</h3>
     <p>Una classe può essere estesa da un'altra classe, che diventa la sottoclasse. La classe originaria è chiamata superclasse.</p>
@@ -308,7 +346,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Array</h2>
+    <h4 id="array-java">Array</h4>
     <p>Un array in Java è una struttura dati che può contenere un insieme ordinato di elementi dello stesso tipo. Gli array sono utilizzati per memorizzare più valori in una singola variabile.</p>
     <h3>Dichiarazione e Inizializzazione:</h3>
     <p>È possibile dichiarare e inizializzare un array specificando il tipo degli elementi e la dimensione dell'array.</p>
@@ -347,7 +385,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Arraylist</h2>
+    <h4 id="arraylist-java">Arraylist</h4>
     <p>ArrayList è una classe fornita dal framework Java che implementa l'interfaccia List e fornisce un'implementazione dinamica di array. Può contenere elementi duplicati e supporta l'aggiunta, la rimozione e la modifica degli elementi.</p>
     <h3>Creazione di un ArrayList:</h3>
     <p>È possibile creare un oggetto ArrayList specificando il tipo degli elementi tra parentesi angolari.</p>
@@ -395,7 +433,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Try-Catch block</h2>
+    <h4 id="try-catch-block-java">Try-Catch block</h4>
     <p>Il blocco try-catch in Java è utilizzato per gestire le eccezioni, ovvero situazioni anomale che si verificano durante l'esecuzione di un programma. Consente di catturare un'eccezione e gestirla in modo appropriato, impedendo che interrompa l'esecuzione del programma.</p>
     <h3>Sintassi:</h3>
     <p>Il blocco try-catch è costituito da due parti: il blocco try, che contiene il codice che potrebbe generare un'eccezione, e uno o più blocchi catch, che gestiscono le eccezioni catturate.</p>
@@ -436,7 +474,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Input/Output</h2>
+    <h4 id="input-output-java">Input/Output</h4>
     <p>L'Input/Output (I/O) in Java si riferisce al processo di lettura da input e scrittura su output, come la console o i file.</p>
     <h3>Lettura da Input Standard:</h3>
     <p>Per leggere input dalla console, si può utilizzare la classe Scanner.</p>
@@ -483,6 +521,6 @@
     </p>
     <p>Java fornisce una varietà di classi e metodi per gestire l'I/O, consentendo di leggere e scrivere dati da diverse fonti e destinazioni in modo efficiente.</p>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

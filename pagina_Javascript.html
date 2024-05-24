@@ -13,26 +13,64 @@
         <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
         <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
     </div>
+    <div class="auth-buttons">
+        <div class="dropdown">
+            <button class="btn btn-login">Accedi</button>
+            <div class="dropdown-content" id="login-form">
+                <div class="form-container">
+                    <div class="login-form">
+                        <h2>Login</h2>
+                        <form action="submit_login.php" method="POST">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Accedi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-register">Registrati</button>
+            <div class="dropdown-content" id="register-form">
+                <div class="form-container">
+                    <div class="register-form">
+                        <h2>Registrati</h2>
+                        <form action="submit_register.php" method="POST">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" name="email" required>
+                            <label for="register-password">Password:</label>
+                            <input type="password" id="register-password" name="password" required>
+                            <button type="submit">Registrati</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-logged-in" style="display:none;">Hai effettuato l'accesso</button>
+    </div>
 </header>
+<div id="message"></div>
 
 <div class="legend-container">
     <div class="legend-toggle">Argomenti del tutorial</div>
     <div class="legend-content">
         <ul>
-            <li>Introduzione a JavaScript</li>
-            <li>Sintassi di JavaScript</li>
-            <li>Operatori</li>
-            <li>Strutture di controllo</li>
-            <li>Funzioni</li>
-            <li>Oggetti</li>
-            <li>Array</li>
-            <li>Gestione degli errori</li>
+            <li><a href="#introduzione-a-javascript">Introduzione a JavaScript</a></li>
+            <li><a href="#sintassi-javascript">Sintassi di JavaScript</a></li>
+            <li><a href="#operatori-javascript">Operatori</a></li>
+            <li><a href="#strutture-di-controllo-javascript">Strutture di controllo</a></li>
+            <li><a href="#funzioni-javascript">Funzioni</a></li>
+            <li><a href="#oggetti-javascript">Oggetti</a></li>
+            <li><a href="#array-javasript">Array</a></li>
+            <li><a href="#gestione-degli-errori-javascript">Gestione degli errori</a></li>
         </ul>
     </div>
 </div>
 
-<div class="tutorial-container">
-    <h2>Introduzione a Javascript:</h2>
+<div class="tutorial-container" >
+    <h4 id="introduzione-a-javascript">Introduzione a Javascript:</h4>
     <p>JavaScript è un linguaggio di programmazione ad alto livello, interpretato e orientato agli oggetti, comunemente utilizzato per creare siti web dinamici e applicazioni web interattive.</p>
     <h3>Caratteristiche principali:</h3>
     <ul>
@@ -48,7 +86,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Sintassi</h2>
+    <h4 id="sintassi-javascript">Sintassi</h4>
     <p>La sintassi di JavaScript è relativamente semplice e segue alcune regole di base.</p>
     <h3>Case Sensitivity:</h3>
     <p>JavaScript è case-sensitive, il che significa che fa distinzione tra maiuscole e minuscole.</p>
@@ -113,7 +151,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Operatori:</h2>
+    <h4 id="operatori-javascript">Operatori:</h4>
     <p>Gli operatori in JavaScript sono simboli speciali utilizzati per eseguire operazioni su operandi (valori o variabili).</p>
     <h3>Operatori Aritmetici:</h3>
     <p>Eseguono operazioni matematiche tra due valori.</p>
@@ -169,7 +207,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Strutture di controllo</h2>
+    <h4 id="strutture-di-controllo-javascript">Strutture di controllo</h4>
     <p>Le strutture di controllo in JavaScript sono utilizzate per gestire il flusso di esecuzione del codice.</p>
     <h3>if...else:</h3>
     <p>Consente di eseguire un blocco di codice se una condizione è vera e un altro blocco di codice se la condizione è falsa.</p>
@@ -237,7 +275,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Funzioni</h2>
+    <h4 id="funzioni-javascript">Funzioni</h4>
     <p>Le funzioni in JavaScript sono blocchi di codice riutilizzabili che eseguono un'azione o calcolano un valore.</p>
     <h3>Dichiarazione di una Funzione:</h3>
     <p>Le funzioni possono essere dichiarate utilizzando la parola chiave <strong>function</strong>.</p>
@@ -303,7 +341,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Oggetti</h2>
+    <h4 id="oggetti-javascript">Oggetti</h4>
     <p>Gli oggetti in JavaScript sono contenitori per un insieme di proprietà correlate, definite da coppie chiave-valore.</p>
     <h3>Dichiarazione di un Oggetto:</h3>
     <p>Gli oggetti possono essere creati utilizzando le parentesi graffe <strong>{}</strong> e definendo le loro proprietà all'interno.</p>
@@ -359,7 +397,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Array</h2>
+    <h4 id="array-javascript">Array</h4>
     <p>Gli array in JavaScript sono oggetti adatti per memorizzare una sequenza ordinata di valori.</p>
     <h3>Dichiarazione di un Array:</h3>
     <p>Gli array possono essere creati utilizzando le parentesi quadre <strong>[]</strong> e definendo i loro elementi all'interno.</p>
@@ -414,7 +452,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Gestione degli errori</h2>
+    <h4 id="gestione-degli-errori-javaascript">Gestione degli errori</h4>
     <p>La gestione degli errori in JavaScript consente di gestire situazioni impreviste durante l'esecuzione del codice</p>
     <h3>try...catch Statement:</h3>
     <p>Consente di gestire gli errori in modo controllato, eseguendo un blocco di codice e catturando eventuali errori generati al suo interno.</p>
@@ -449,6 +487,6 @@
     </p>
     <p>La gestione degli errori è fondamentale per garantire la robustezza e l'affidabilità delle applicazioni JavaScript, consentendo di identificare e gestire eventuali problemi durante l'esecuzione del codice.</p>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

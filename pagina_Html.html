@@ -7,36 +7,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="navbar">
     <div class="brand">
         <h1 class="titolo"><a href="index.html" class="home-link">DIARIO DEL PROGRAMMATORE</a></h1>
         <p class="sottotitolo">Pensato per gli studenti dell'Itis Andrea Ponti</p>
     </div>
+    <div class="auth-buttons">
+        <div class="dropdown">
+            <button class="btn btn-login">Accedi</button>
+            <div class="dropdown-content" id="login-form">
+                <div class="form-container">
+                    <div class="login-form">
+                        <h2>Login</h2>
+                        <form action="submit_login.php" method="POST">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Accedi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-register">Registrati</button>
+            <div class="dropdown-content" id="register-form">
+                <div class="form-container">
+                    <div class="register-form">
+                        <h2>Registrati</h2>
+                        <form action="submit_register.php" method="POST">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" name="email" required>
+                            <label for="register-password">Password:</label>
+                            <input type="password" id="register-password" name="password" required>
+                            <button type="submit">Registrati</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-logged-in" style="display:none;">Hai effettuato l'accesso</button>
+    </div>
 </header>
-
+<div id="message"></div>
 <div class="legend-container">
     <div class="legend-toggle">Argomenti del tutorial</div>
     <div class="legend-content">
         <ul>
-            <li>Introduzione</li>
-            <li>Struttura di base</li>
-            <li>Tag e Elementi</li>
-            <li>Formattazione di testo e contenuti</li>
-            <li>Collegamenti e navigazione</li>
-            <li>Immagini e Multimedia</li>
-            <li>Tabelle e Liste</li>
-            <li>Form e Input Utente</li>
-            <li>Layout e Struttura della pagina</li>
-            <li>Semantica e Accessibilità</li>
+            <li><a href="#introduzione-html">Introduzione</a></li>
+            <li><a href="#struttura-di-base-html">Struttura di base</a></li>
+            <li><a href="#tag-e-elementi-html">Tag e Elementi</a></li>
+            <li><a href="#formattazione-del-testo-html">Formattazione del testo</a></li>
+            <li><a href="#collegamenti-e-navigazione-html">Collegamenti e navigazione</a></li>
+            <li><a href="#immagini-e-multimedia-html">Immagini e Multimedia</a></li>
+            <li><a href="#tabelle-e-liste-html">Tabelle e Liste</a></li>
+            <li><a href="#form-e-input-utente-html">Form e Input Utente</a></li>
+            <li><a href="#layout-della-pagina-html">Layout della pagina</a></li>
+            <li><a href="#semantica-e-accessibilita-html">Semantica e Accessibilità</a></li>
         </ul>
     </div>
 </div>
 
 <div class="tutorial-container">
-    <h2>Introduzione al linguaggio HTML</h2>
+    <h4 id="introduzione-html">Introduzione</h4>
     <p>HTML, acronimo di HyperText Markup Language, è il linguaggio standard utilizzato per creare e visualizzare pagine web sui browser. È un linguaggio di markup che definisce la struttura e il contenuto di una pagina web utilizzando una serie di tag.</p>
-    <h3>Struttura di Base:</h3>
+    <h4 id="struttura-di-base-html">Struttura di base</h4>
     <p>Una pagina HTML è costituita da una serie di elementi HTML racchiusi tra i tag <strong>html</strong> e <strong>html</strong>. La struttura di base di una pagina HTML include anche i tag <strong>head</strong> e <strong>body</strong></p>
     <p>
         <code class="code">
@@ -84,7 +120,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Tag e Elementi</h2>
+    <h4 id="tag-e-elementi-html">Tag e Elementi</h4>
     <p>Gli elementi HTML sono costruiti utilizzando una combinazione di tag, attributi e contenuti. I tag HTML sono racchiusi tra parentesi angolari e specificano il tipo di elemento.</p>
     <h3>Tag di Testo:</h3>
     <p>Utilizzati per formattare e visualizzare il testo sulla pagina web.</p>
@@ -138,7 +174,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Formattazione di Testo e Contenuti</h2>
+    <h4 id="formattazione-del-testo-html">Formattazione del testo</h4>
     <p>La formattazione dei testi e dei contenuti in HTML è possibile grazie a una serie di tag dedicati che permettono di modificare l'aspetto e lo stile del testo.</p>
     <h3>Paragrafi e Intestazioni:</h3>
     <p>I tag <strong>p</strong> e <strong>h1</strong> - <strong>h6</strong> sono utilizzati per definire paragrafi e titoli di diversi livelli.</p>
@@ -177,7 +213,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Collegamenti e Navigazione</h2>
+    <h4 id="collegamenti-e-navigazione-html">Collegamenti e navigazione</h4>
     <p>I collegamenti ipertestuali sono elementi fondamentali nelle pagine web che consentono agli utenti di navigare tra diverse pagine o risorse online. In HTML, i collegamenti sono definiti utilizzando il tag <strong>a</strong>.</p>
     <h3>Collegamenti a URL Esterni:</h3>
     <p>Utilizzando il tag <strong>a</strong> insieme all'attributo <strong>href</strong>, è possibile creare collegamenti ipertestuali a pagine esterne.</p>
@@ -213,7 +249,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Immagini e Multimedia</h2>
+    <h4 id="immagini-e-multimedia-html">Immagini e Multimedia</h4>
     <p>Le immagini e il contenuto multimediale sono componenti importanti di una pagina web che arricchiscono l'esperienza dell'utente. In HTML, è possibile incorporare immagini, video e audio utilizzando i tag appropriati.</p>
     <h3>Tag <strong>img</strong> per Immagini:</h3>
     <p>Utilizzando il tag <strong>img</strong>, è possibile incorporare immagini nelle pagine web specificando l'URL dell'immagine e, facoltativamente, il testo alternativo.</p>
@@ -247,7 +283,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Tabelle e Liste</h2>
+    <h4 id="tabelle-e-liste-html">Tabelle e Liste</h4>
     <p>Le tabelle e le liste sono utilizzate per organizzare e presentare dati in modo strutturato e ordinato nelle pagine web.</p>
     <h3>Tabelle HTML:</h3>
     <p>Le tabelle in HTML sono create utilizzando i tag <strong>table</table></strong>, <strong>tr</strong> per le righe e <strong>td</strong> per le celle.</p>
@@ -296,7 +332,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Form e Input Utente</h2>
+    <h4 id="form-e-input-utente-html">Form e Input Utente</h4>
     <p>I form HTML consentono agli utenti di inserire dati interattivamente e inviarli al server per l'elaborazione. Gli input utente possono includere campi di testo, caselle di controllo, pulsanti di opzione e altro ancora.</p>
     <h3>Tag <strong>form</strong>:</h3>
     <p>Il tag <strong>form</strong> è utilizzato per creare un modulo che raccoglie input dall'utente.</p>
@@ -348,7 +384,7 @@
         </code>
     </p>
     <p>L'uso dei form HTML consente agli sviluppatori di creare interfacce utente interattive e raccogliere dati dagli utenti in modo efficiente.</p>
-    <h2>Layout e struttura della pagina</h2>
+    <h4 id="layout-della-pagina-html">Layout della pagina</h4>
     <p>Il layout e la struttura della pagina HTML organizzano il contenuto in modo chiaro e logico, migliorando l'usabilità e l'estetica.</p>
     <h3>Elementi di Struttura Principali:</h3>
     <p>Gli elementi semantici aiutano a definire la struttura della pagina.</p>
@@ -411,7 +447,7 @@
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
-    <h2>Semantica e Accessibilità</h2>
+    <h4 id="semantica-e-accessibilita-html">Semantica e Accessibilità</h4>
     <p>La semantica HTML e l'accessibilità sono fondamentali per creare pagine web comprensibili e fruibili da tutti gli utenti, inclusi quelli con disabilità.</p>
     <h3>Tag Semantici:</h3>
     <p>Utilizzare tag semantici per definire chiaramente la struttura e il contenuto.</p>
@@ -465,5 +501,6 @@
     </p>
     <p>L'uso di tag semantici e pratiche di accessibilità garantisce che le pagine web siano utilizzabili e comprensibili per tutti gli utenti, migliorando l'esperienza utente e l'inclusività.</p>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
